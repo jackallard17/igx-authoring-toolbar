@@ -7,22 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using igxFormFieldsToolbar.Models;
+using Word = Microsoft.Office.Interop.Word;
+using Office = Microsoft.Office.Core;
+using Microsoft.Office.Tools.Word;
+
+using System.Diagnostics;
 
 namespace igxFormFieldsToolbar
 {
     public partial class newPageForm : Form
     {
-        List<String> items = CMSContentstore.pageSchemaFriendlyNames();
+
+        public List<IGXSchema> schemas = new List<IGXSchema>();
+        public List<String> items;
 
         public newPageForm()
         {
             InitializeComponent();
+            schemas = Controllers.createSchemaObjects();
+            items = Controllers.returnPageNames(schemas);
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int userSelection = listBox1.SelectedIndex;
+            if (userSelection != -1)
+            {
 
+            }
+
+            Controllers.GenerateInputFields(schemas, userSelection);
+            this.Close();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

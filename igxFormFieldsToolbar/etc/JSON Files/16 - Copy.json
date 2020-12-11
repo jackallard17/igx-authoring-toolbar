@@ -3,7 +3,7 @@
     "_OriginPageId": null,
     "IsComponent": false,
     "IsDynamicSitePage": true,
-    "_ViewName": "BrandsDetail",
+    "_ViewName": "CompanyContentPage",
     "_Stylesheet": "",
     "Presentations": null,
     "ContentUnitsInstantiability": {
@@ -19,7 +19,7 @@
           "Component": "",
           "CompTypes": "HeroComponent",
           "AutoEmbed": "false",
-          "LockEmbedState": "",
+          "LockEmbedState": "false",
           "WrappedUp": "false"
         },
         "_ChildProperties": {},
@@ -29,7 +29,7 @@
         "TypeName": "Component",
         "Name": "HeroImage",
         "Label": "Hero Image",
-        "HelpText": "",
+        "HelpText": "If there is a left and a right rail displaying the hero image will not show.",
         "DefaultValue": "",
         "Required": false,
         "Readonly": false,
@@ -38,31 +38,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "9ac272d52b8646cd9de5c47077fe4432"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Asset": "",
-          "AssetTypes": "Image|Binary"
-        },
-        "_ChildProperties": {},
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "30",
-        "TypeName": "Asset",
-        "Name": "MainImage",
-        "Label": "Main Image",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": null,
-        "ChildElementLabel": null,
-        "_ChildElementTypeValue": null,
-        "UniqueID": "fc33bcf20a344183bfb0e4828e9b4701"
+        "UniqueID": "34eaa2e9daa24258bc0257c2251e3b08"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -83,7 +59,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "216c6ff371394df3ad09e9dd1f5b7c04"
+        "UniqueID": "7babd5b5feca42839e84762969aaf81c"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -104,34 +80,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "f438dcd68121443e95c2bf5065198fdc"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Expanded": "true",
-          "Link": "external",
-          "LinkText": "Achieve biopsy needs",
-          "URL": "www.google.com",
-          "Target": ""
-        },
-        "_ChildProperties": {},
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "6",
-        "TypeName": "Link",
-        "Name": "CalltoActionLink",
-        "Label": "Call to Action Link",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": null,
-        "ChildElementLabel": null,
-        "_ChildElementTypeValue": null,
-        "UniqueID": "0b99e226990d4ef086c1fd99a87c754b"
+        "UniqueID": "b961db7a310845379f42e276465ce142"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -152,7 +101,28 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "51dcc15891394b6b8c9dcb40d1069495"
+        "UniqueID": "5894d3b61ea24414bfbad219df6a0a24"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "2",
+        "TypeName": "Text Element",
+        "Name": "BrowseTitle",
+        "Label": "Browse Title",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "feff080e537747359d65a638fa935119"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -176,24 +146,18 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "7b7a3e5f49ab41bb9f84670f88d42831"
+        "UniqueID": "f3ea4d62eca7488f95b7a664fc0e374f"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Component": "",
-          "CompTypes": "FullWidthCalloutBodyComponent",
-          "AutoEmbed": "false",
-          "LockEmbedState": "",
-          "WrappedUp": "false"
-        },
+        "_Properties": {},
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "4",
-        "TypeName": "Component",
-        "Name": "HorizontalCalloutBox",
-        "Label": "Horizontal Callout Box",
+        "_FieldTypeValue": "9",
+        "TypeName": "Checkbox",
+        "Name": "LifestyleImage",
+        "Label": "Lifestyle Image",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -203,7 +167,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "81055a35bae1475da2231ff49064ceed"
+        "UniqueID": "c3b475850d374350982672ff4ab07f33"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -226,20 +190,24 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "d9d683fba9e54535b343b7541d15333c"
+        "UniqueID": "840f93cab3004a268f519230812368f8"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
         "_Properties": {
-          "values": "1/4 1/3 1/2 2/3 3/4 1"
+          "Expanded": "false",
+          "Link": "",
+          "LinkText": "",
+          "URL": "",
+          "Target": ""
         },
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "11",
-        "TypeName": "Dropdown List",
-        "Name": "BodyCopySpacing",
-        "Label": "Body Copy Spacing",
+        "_FieldTypeValue": "6",
+        "TypeName": "Link",
+        "Name": "FullWidthIFrameAddress",
+        "Label": "Full Width IFrame Address",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -249,49 +217,21 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "7849b4282de140ffa9bc3e16808074ba"
+        "UniqueID": "ee3cb952566a44fd84281ce6068dc8ab"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
         "_Properties": {
-          "Enclosed": "false"
-        },
-        "_ChildProperties": {
-          "Component": "",
-          "CompTypes": "",
-          "AutoEmbed": "false",
-          "LockEmbedState": "",
-          "WrappedUp": "false"
-        },
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "5",
-        "TypeName": "List",
-        "Name": "BodyComponents",
-        "Label": "Body Components",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": "Component",
-        "ChildElementLabel": "",
-        "_ChildElementTypeValue": "4",
-        "UniqueID": "3c8d7e115fc349759654cb3a8e62d341"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Enclosed": "false"
+          "Asset": "",
+          "AssetTypes": "Image|Binary"
         },
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "15",
-        "TypeName": "GroupStart",
-        "Name": "PresentationFields",
-        "Label": "Presentation Fields",
+        "_FieldTypeValue": "30",
+        "TypeName": "Asset",
+        "Name": "FeatureImage1",
+        "Label": "Feature Image 1",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -301,7 +241,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "__PresentationFieldsGroup__"
+        "UniqueID": "b17f1f17dc4e43c0934f8a5bbcb96582"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -311,8 +251,8 @@
         "ChildElements": null,
         "_FieldTypeValue": "2",
         "TypeName": "Text Element",
-        "Name": "NotesTitle",
-        "Label": "Notes Title",
+        "Name": "FeatureHeading1",
+        "Label": "Feature Heading 1",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -322,7 +262,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "8300ebe6f4764dda9b5a6375e668688e"
+        "UniqueID": "0d7c026346464bf1a2cab67768e93731"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -334,8 +274,8 @@
         "ChildElements": null,
         "_FieldTypeValue": "3",
         "TypeName": "XHTML Element",
-        "Name": "NotesCopy",
-        "Label": "Notes Copy",
+        "Name": "FeatureCopy1",
+        "Label": "Feature Copy 1",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -345,7 +285,58 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "7c29afe97cec496ba8111591d06197fb"
+        "UniqueID": "278717a2648b491483223e4c46f3d2ad"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Expanded": "true",
+          "Link": "",
+          "LinkText": "",
+          "URL": "",
+          "Target": ""
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "6",
+        "TypeName": "Link",
+        "Name": "FeatureLink1",
+        "Label": "Feature Link 1",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "82b0f66f342c48009ac16f7014d78d95"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Asset": "",
+          "AssetTypes": "Image|Binary"
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "30",
+        "TypeName": "Asset",
+        "Name": "FeatureImage2",
+        "Label": "Feature Image 2",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "d481e6c263d24c258d59760641882624"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -355,8 +346,8 @@
         "ChildElements": null,
         "_FieldTypeValue": "2",
         "TypeName": "Text Element",
-        "Name": "ReferencesTitle",
-        "Label": "References Title",
+        "Name": "FeatureHeading2",
+        "Label": "Feature Heading 2",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -366,30 +357,80 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "cf7998293d67415986e0268322e3415b"
+        "UniqueID": "fcef989bf557461d90e34bbbb4b89330"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
         "_Properties": {
-          "Enclosed": "false"
+          "Height": ""
         },
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "5",
-        "TypeName": "List",
-        "Name": "References",
-        "Label": "References",
+        "_FieldTypeValue": "3",
+        "TypeName": "XHTML Element",
+        "Name": "FeatureCopy2",
+        "Label": "Feature Copy 2",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
         "Readonly": false,
         "Hidden": false,
         "Indexable": false,
-        "ChildElementName": "Reference",
-        "ChildElementLabel": "",
-        "_ChildElementTypeValue": "2",
-        "UniqueID": "e2203407e2a147b981b4c7f2f922d156"
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "3022626bddbd424692af9d6e6dd45dd6"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Expanded": "true",
+          "Link": "",
+          "LinkText": "",
+          "URL": "",
+          "Target": ""
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "6",
+        "TypeName": "Link",
+        "Name": "FeatureLink2",
+        "Label": "Feature Link 2",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "89d92c09c26d49bb8386330f8f69d9a2"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Height": ""
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "3",
+        "TypeName": "XHTML Element",
+        "Name": "LowerCopy",
+        "Label": "Lower Copy",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "6ab793847d8a40c9bc820081663f0f3b"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -397,11 +438,11 @@
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "16",
-        "TypeName": "GroupEnd",
-        "Name": "",
-        "Label": "",
-        "HelpText": "",
+        "_FieldTypeValue": "9",
+        "TypeName": "Checkbox",
+        "Name": "HideLeftNavigation",
+        "Label": "Hide Left Navigation?",
+        "HelpText": "Hides the left navigation and the center content spans left to fill the space. This cannot be false unless Push Sales/Support Inline Hero is true.",
         "DefaultValue": "",
         "Required": false,
         "Readonly": false,
@@ -410,7 +451,128 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "1af15f4b5193417ebbabd706efbfbfdd"
+        "UniqueID": "606cf45ddd434c6eabf159a82c1f2a84"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "9",
+        "TypeName": "Checkbox",
+        "Name": "PushSalesSupportInlineHero",
+        "Label": "Push Sales/Support Inline Hero",
+        "HelpText": "Moves the Sales/Support link inline with the hero image.  If this is checked it will hide all other items in the right rail",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "4a8816df30a14620a7462ec94ccf406c"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "9",
+        "TypeName": "Checkbox",
+        "Name": "EnableContactSalesLink",
+        "Label": "Enable Contact Sales Link?",
+        "HelpText": "",
+        "DefaultValue": "true",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "38c0902c2f884ab38d68642b772d07d4"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "9",
+        "TypeName": "Checkbox",
+        "Name": "EnableContactSupportLink",
+        "Label": "Enable Contact Support Link?",
+        "HelpText": "",
+        "DefaultValue": "true",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "b08e264e890d4359adce5a86d0fafec9"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Enclosed": "false"
+        },
+        "_ChildProperties": {
+          "Component": "",
+          "CompTypes": "ImageBodyComponent;BodyWrapperComponent;ProductCarouselComponent;BenefitsListingBodyComponent;FlexibleBodyComponent;LinkListBodyComponent;LinkCategoryBodyComponent;LinkIndexBodyComponent;InteractiveBodyComponent;InteractiveFeaturesBodyComponent;PopularResourceBodyComponent;TwoColumnBodyComponent;RotatingBodyComponent;ImageInfoComponent;ImageQuoteComponent;CareerButtonComponent;CalltoActionComponent;FullWidthCalloutBodyComponent;SolutionsQuadrantBodyComponent;FeaturedVideosBodyComponent;ManualListBodyComponent",
+          "AutoEmbed": "false",
+          "LockEmbedState": "false",
+          "WrappedUp": "false"
+        },
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "5",
+        "TypeName": "List",
+        "Name": "BodyComponents",
+        "Label": "Body Components (Deprecated)",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": "Component",
+        "ChildElementLabel": "",
+        "_ChildElementTypeValue": "4",
+        "UniqueID": "3ca9accae5984ea0b896bc5f2c3317ed"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Enclosed": "false"
+        },
+        "_ChildProperties": {
+          "Component": "",
+          "CompTypes": "RightRailBlogListingComponent;RightRailDownloadComponent;RightRailEventsCategoryListingComponent;RightRailEventsEditorialListingComponent;RightRailEventsMostRecentListingComponent;RightRailFormInsertComponent;RightRailFormBuilderFormComponent;RightRailListingComponent;RightRailMessageComponent;RightRailNewsListingComponent;RightRailPromoComponent;RightRailRotatingComponents",
+          "AutoEmbed": "false",
+          "LockEmbedState": "false",
+          "WrappedUp": "false"
+        },
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "5",
+        "TypeName": "List",
+        "Name": "RightRailComponents",
+        "Label": "Right Rail Components",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": "Component",
+        "ChildElementLabel": "",
+        "_ChildElementTypeValue": "4",
+        "UniqueID": "01685ba3860e49279e735f0105b311d9"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -433,7 +595,31 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "cbb0d71a8f334872a292614c7c1ae7e2"
+        "UniqueID": "f6cd20dbb21b41da8b7bdef351672ccd"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Asset": "",
+          "AssetTypes": "Image|Binary"
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "30",
+        "TypeName": "Asset",
+        "Name": "Image360x270",
+        "Label": "Image 360x270",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": true,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "3b4d69fe488543f291b92ab4a83b91d9"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -457,7 +643,31 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "54ad8b173e8f4ff487bd10b4790fa218"
+        "UniqueID": "cd742be1956f4504b26d5fff20d39480"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Asset": "",
+          "AssetTypes": "Image|Binary"
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "30",
+        "TypeName": "Asset",
+        "Name": "Image100x70",
+        "Label": "Image 100x70",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": true,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "9e77da50fb1848c085114b73dbeaf8fc"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -478,7 +688,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "0393fbea4d2347b4ac2a27fb77011d82"
+        "UniqueID": "c3d5de45dc1c4899ad8acc8c14a2d592"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -490,8 +700,8 @@
         "ChildElements": null,
         "_FieldTypeValue": "15",
         "TypeName": "GroupStart",
-        "Name": "PresentationFields",
-        "Label": "Presentation Fields",
+        "Name": "FootnotesGroup",
+        "Label": "Footnotes Group",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -501,7 +711,139 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "e7075565272045b9b5f3b2f1a69ad6a9"
+        "UniqueID": "866a4a5d06194762a959931f359d2687"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "2",
+        "TypeName": "Text Element",
+        "Name": "NotesTitle",
+        "Label": "Notes Title",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "8282373fc6b441bca01641f5c32534cb"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Height": ""
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "3",
+        "TypeName": "XHTML Element",
+        "Name": "NotesCopy",
+        "Label": "Notes Copy",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "39521992d9d74a2ea5e0759b6d96fb43"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "2",
+        "TypeName": "Text Element",
+        "Name": "ReferencesTitle",
+        "Label": "References Title",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "20d8dc23256943949129e475ee1a16c6"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Enclosed": "false"
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "5",
+        "TypeName": "List",
+        "Name": "References",
+        "Label": "References",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": "Reference",
+        "ChildElementLabel": "",
+        "_ChildElementTypeValue": "2",
+        "UniqueID": "4e4c653f6c9642d4adc91541062bd1cb"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "16",
+        "TypeName": "GroupEnd",
+        "Name": "",
+        "Label": "",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "5d1a1e85d8bd4d91a5201ab1f5e1cb6d"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {
+          "Enclosed": "false"
+        },
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "15",
+        "TypeName": "GroupStart",
+        "Name": "SEOGroup",
+        "Label": "SEO Group",
+        "HelpText": "",
+        "DefaultValue": "",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": true,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "843a77b13a0147aa92ea3201758088a1"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -522,7 +864,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "de869d18959d416790c82add8b443e42"
+        "UniqueID": "43f855e8aa1340468d7cb4d173474b41"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -543,7 +885,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "6bc57df6002547f595f4d7582b2248ba"
+        "UniqueID": "241a2e5eb57248c7b53c04f7ed6f28c1"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -564,7 +906,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "744dc8987f29496a8450326d08f9fc8b"
+        "UniqueID": "479f1b5a015d43b6aa9a9ed1504f0307"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -585,7 +927,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "2175f8380a6147f5b64e4b336b659aee"
+        "UniqueID": "8ab1aafabe094632a81902c8e589047a"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -606,7 +948,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "9d8f26313ec749a089a0981ff9c95202"
+        "UniqueID": "9a08e318d58e4e2abe8c054f8f6959d4"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -627,7 +969,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "68b10aa63b3a4226b3df9b497a625392"
+        "UniqueID": "0f4f566575354896861cd6243a352d27"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -648,7 +990,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "28e4bd3f04eb44128f8925bf72cf94be"
+        "UniqueID": "7e6580c886e946c596739da0be75dcd7"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -663,7 +1005,7 @@
         "Name": "Priority",
         "Label": "Priority",
         "HelpText": "",
-        "DefaultValue": "",
+        "DefaultValue": "0.5",
         "Required": false,
         "Readonly": false,
         "Hidden": false,
@@ -671,7 +1013,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "054954c8aee54721a9d0d79240c545ac"
+        "UniqueID": "c92b305291e34c87aa8cce40f135bf91"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -683,8 +1025,8 @@
         "ChildElements": null,
         "_FieldTypeValue": "15",
         "TypeName": "GroupStart",
-        "Name": "PresentationFields",
-        "Label": "Presentation Fields",
+        "Name": "SocialMediaSharing",
+        "Label": "Social Media Sharing",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
@@ -694,7 +1036,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "6f2a2908d88446b0b075aa7c9f648d34"
+        "UniqueID": "fbd09ddb54804b7c9b1381764f09440d"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -709,7 +1051,7 @@
         "Name": "Type",
         "Label": "Type",
         "HelpText": "",
-        "DefaultValue": "",
+        "DefaultValue": "website",
         "Required": false,
         "Readonly": false,
         "Hidden": false,
@@ -717,7 +1059,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "db6d0bc043824d1e8165df948a02143f"
+        "UniqueID": "45dc0433673c4256b0615fa82519d17e"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -738,7 +1080,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "277538afaf5542a4840d1e282e32436b"
+        "UniqueID": "b2820bd00ee140d7b9c191c84889fd6d"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -759,7 +1101,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "96130a80120e441bad900695ec26e4a5"
+        "UniqueID": "815243f3e6cb4cf98c89f40472f99c79"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -783,7 +1125,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "37a98a80c0394a44958569399cfb1a06"
+        "UniqueID": "ac78ff96b22d41ec864e914f1177d808"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -806,7 +1148,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "36ba70871aec421cbf5c4d4ea3060583"
+        "UniqueID": "ae052cedb0464fe5b9ec0f2a7917b805"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -819,7 +1161,7 @@
         "Name": "TwitterAuthor",
         "Label": "Twitter Creator",
         "HelpText": "",
-        "DefaultValue": "",
+        "DefaultValue": "@carefusion",
         "Required": false,
         "Readonly": false,
         "Hidden": false,
@@ -827,7 +1169,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "0a0012f11d08471eb0aca0f4c286af7c"
+        "UniqueID": "732aa06be7c141418ef72e1bf43a3376"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -848,7 +1190,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "7abc502b3572476ebda8884defd82926"
+        "UniqueID": "bef893078efc4bedb5a13d38e3f713c7"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -857,9 +1199,9 @@
         },
         "_ChildProperties": {
           "Component": "",
-          "CompTypes": "",
+          "CompTypes": "PageEventTrackingComponent",
           "AutoEmbed": "false",
-          "LockEmbedState": "",
+          "LockEmbedState": "false",
           "WrappedUp": "false"
         },
         "_Exports": {},
@@ -877,7 +1219,7 @@
         "ChildElementName": "Event",
         "ChildElementLabel": "",
         "_ChildElementTypeValue": "4",
-        "UniqueID": "67e61f7e3535414ab5f97259274bdcd4"
+        "UniqueID": "ceb061333e2b4519819fc38d58e256d4"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -898,7 +1240,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "288dd4d3db2d4bd5928967d88477a707"
+        "UniqueID": "218ffe5aed29495aac219fc8dbb37350"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -910,18 +1252,18 @@
         "ChildElements": null,
         "_FieldTypeValue": "15",
         "TypeName": "GroupStart",
-        "Name": "PresentationFields",
-        "Label": "Presentation Fields",
+        "Name": "CustomScriptsGroup",
+        "Label": "Custom Scripts Group",
         "HelpText": "",
         "DefaultValue": "",
         "Required": false,
         "Readonly": false,
-        "Hidden": false,
+        "Hidden": true,
         "Indexable": false,
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "fc2458b60511479193c76856faba894f"
+        "UniqueID": "6830cd0b17bc485dae951e03dbfcc548"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -942,7 +1284,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "ff14b95916ed4f2a8c15d9258f49636c"
+        "UniqueID": "bdccf664cfff4cc6a4da6c4d1b47eb08"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -963,7 +1305,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "0ff907f2392b49418bff5ba19a4b2377"
+        "UniqueID": "3696ed535bca4cc989f7a95cc67827ae"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -984,7 +1326,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "f36b3720cff3473f8b13dbc1d82370d0"
+        "UniqueID": "28b02bc79f51461c853428ed0c6b0cda"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -1013,15 +1355,15 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "f99c09f16ccb49f9a2ed6064cea69159"
+        "UniqueID": "54c39357d2d5448ea2a17b0b535d3a70"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
         "_Properties": {
-          "Component": "x8",
+          "Component": "",
           "CompTypes": "SectionControlComponent",
           "AutoEmbed": "false",
-          "LockEmbedState": "",
+          "LockEmbedState": "false",
           "WrappedUp": "false"
         },
         "_ChildProperties": {},
@@ -1040,84 +1382,7 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "680fb5854ad344779b5f8034d7a0a406"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Enclosed": "false"
-        },
-        "_ChildProperties": {},
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "15",
-        "TypeName": "GroupStart",
-        "Name": "PresentationFields",
-        "Label": "Presentation Fields",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": null,
-        "ChildElementLabel": null,
-        "_ChildElementTypeValue": null,
-        "UniqueID": "417820e4556b443e9f74d4811757ff04"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Component": "x11019",
-          "CompTypes": "FlexibleBodyComponent",
-          "AutoEmbed": "false",
-          "LockEmbedState": "",
-          "WrappedUp": "true"
-        },
-        "_ChildProperties": {},
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "4",
-        "TypeName": "Component",
-        "Name": "FlexibleBodyComponent_Unit",
-        "Label": "Flexible Body Component",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": null,
-        "ChildElementLabel": null,
-        "_ChildElementTypeValue": null,
-        "UniqueID": "3ee3cf29ef11863340fb61862fe47c95"
-      },
-      {
-        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
-        "_Properties": {
-          "Component": "x11020",
-          "CompTypes": "FlexibleBodyComponent",
-          "AutoEmbed": "false",
-          "LockEmbedState": "",
-          "WrappedUp": "true"
-        },
-        "_ChildProperties": {},
-        "_Exports": {},
-        "ChildElements": null,
-        "_FieldTypeValue": "4",
-        "TypeName": "Component",
-        "Name": "FlexibleBodyComponent_Unit",
-        "Label": "Flexible Body Component",
-        "HelpText": "",
-        "DefaultValue": "",
-        "Required": false,
-        "Readonly": false,
-        "Hidden": false,
-        "Indexable": false,
-        "ChildElementName": null,
-        "ChildElementLabel": null,
-        "_ChildElementTypeValue": null,
-        "UniqueID": "b30abec4d62f65ff9a57b8679b0f1d19"
+        "UniqueID": "d9078865202441cc9f94c8877fc46473"
       },
       {
         "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
@@ -1125,12 +1390,12 @@
         "_ChildProperties": {},
         "_Exports": {},
         "ChildElements": null,
-        "_FieldTypeValue": "16",
-        "TypeName": "GroupEnd",
-        "Name": "",
+        "_FieldTypeValue": "1",
+        "TypeName": "Attribute",
+        "Name": "QPNumber",
         "Label": "",
-        "HelpText": "",
-        "DefaultValue": "",
+        "HelpText": null,
+        "DefaultValue": null,
         "Required": false,
         "Readonly": false,
         "Hidden": false,
@@ -1138,31 +1403,52 @@
         "ChildElementName": null,
         "ChildElementLabel": null,
         "_ChildElementTypeValue": null,
-        "UniqueID": "37c2df46438e4af6a325ed8ffa855ce3"
+        "UniqueID": "837e675928bf4e2d99d8283339114623"
+      },
+      {
+        "$type": "Ingeniux.CMS.SchemaField, Ingeniux.CMS.CSAPI",
+        "_Properties": {},
+        "_ChildProperties": {},
+        "_Exports": {},
+        "ChildElements": null,
+        "_FieldTypeValue": "1",
+        "TypeName": "Attribute",
+        "Name": "IssueNumber",
+        "Label": "",
+        "HelpText": null,
+        "DefaultValue": "1",
+        "Required": false,
+        "Readonly": false,
+        "Hidden": false,
+        "Indexable": false,
+        "ChildElementName": null,
+        "ChildElementLabel": null,
+        "_ChildElementTypeValue": null,
+        "UniqueID": "f0199d64f5434751b14b6baf910b28f3"
       }
     ],
     "_DefaultCategoryIds": [],
     "_RootCategoryIds": [],
     "_WorkflowDefinitionId": "",
-    "SchemaId": "schemas/2",
+    "SchemaId": "schemas/16",
     "IsCurrentVersion": true,
     "VersionNumber": 1,
     "Drafting": false,
-    "_FriendlyName": "Brands Detail 1",
-    "_RootName": "BrandsDetail",
+    "_FriendlyName": "Company Content Page",
+    "_RootName": "CompanyContentPage",
     "Icon": 2,
     "ThumbnailId": null,
     "WorkflowRequired": false,
     "Versioning": 0,
     "QuickEditableFieldIds": [],
-    "Id": "SchemaVersion__5",
+    "Id": "SchemaVersion__34",
     "CreationUser": "igxsupport",
-    "Created": "2020-07-27T16:25:39.8635403",
+    "Created": "2020-07-27T16:25:42.2895895",
     "LastModifiedUser": "User/igxsupport",
-    "LastModified": "2020-07-27T16:25:39.8685391"
+    "LastModified": "2020-07-27T16:25:42.2975901"
   },
   "Versioning": 0,
-  "Name": "Brands Detail 1",
+  "Name": "Company Content Page",
   "_RuntimeIndexable": true,
   "_schemaSystemSecurity": {
     "$type": "Ingeniux.CMS.SchemaSystemSecurity, Ingeniux.CMS.CSAPI",

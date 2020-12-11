@@ -308,6 +308,7 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Controllers\documentControls.cs" />
     <Compile Include="Controllers\createSchemaObjects.cs" />
     <Compile Include="Models\SchemaField.cs" />
     <Compile Include="Models\IGXSchema.cs" />
@@ -317,7 +318,7 @@
     <Compile Include="Views\newPageForm.Designer.cs">
       <DependentUpon>newPageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\queryPageSchemas.cs" />
+    <Compile Include="Controllers\returnPageNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -346,6 +347,9 @@
       <DependentUpon>toolbarRibbon.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="etc\JSON Files\16 - Copy.json" />
+    <None Include="etc\JSON Files\99.json" />
+    <None Include="etc\JSON Files\98.json" />
     <None Include="etc\JSON Files\58.json" />
     <None Include="etc\JSON Files\8.json" />
     <None Include="etc\JSON Files\16.json" />

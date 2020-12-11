@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using System.Diagnostics;
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
-using System.Diagnostics;
+
 
 namespace igxFormFieldsToolbar
 {
@@ -20,13 +21,7 @@ namespace igxFormFieldsToolbar
         {
         }
 
-        internal void addPlainTextField()
-        {
-            Document vstoDocument = Globals.Factory.GetVstoObject(this.Application.ActiveDocument);
 
-            string fieldLabel = "plaintext";
-            vstoDocument.Controls.AddPlainTextContentControl(fieldLabel);
-        }
 
         #region VSTO generated code
 

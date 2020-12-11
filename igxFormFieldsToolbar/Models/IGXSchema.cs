@@ -13,5 +13,6 @@ namespace igxFormFieldsToolbar.Models
         public string friendlyName { get; set; }
 
         public List<SchemaField> Fields = new List<SchemaField>();
+        public string jsonString { get; set; }
     }
 }
