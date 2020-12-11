@@ -1,0 +1,135 @@
+<Schema xmlns:dt="urn:schemas-microsoft-com:datatypes" name="AudiencePage" xmlns="urn:schemas-microsoft-com:xml-data">
+  <AttributeType name="ID" dt:type="id" required="yes" />
+  <AttributeType name="Name" dt:type="string" required="yes" />
+  <AttributeType name="UniqueID" dt:type="int" default="schemas/99" />
+  <AttributeType name="Icon" dt:type="int" default="2" />
+  <AttributeType name="FriendlyName" dt:type="string" default="Audience Page" />
+  <AttributeType name="DefaultCategorization" dt:type="string" default="" />
+  <AttributeType name="Version" dt:type="int" default="1" />
+  <AttributeType name="LastModifiedUser" dt:type="string" default="User/igxsupport" />
+  <ElementType name="Exports" content="textOnly" />
+  <ElementType name="xpowerlist_HeroRotator" content="eltOnly" />
+  <ElementType name="xpowercomponent_Hero" content="eltOnly" />
+  <ElementType name="MoveHerotoTop" dt:type="boolean" content="textOnly" />
+  <ElementType name="Title" dt:type="string" content="textOnly" />
+  <ElementType name="Subtitle" dt:type="string" content="textOnly" />
+  <ElementType name="Abstract" dt:type="string" content="textOnly" />
+  <ElementType name="BrowseTitle" dt:type="string" content="textOnly" />
+  <ElementType name="xpowerasset_ReuseImage" content="eltOnly" />
+  <ElementType name="LifestyleImage" dt:type="boolean" content="textOnly" />
+  <ElementType name="xhtml_BodyCopy" content="textOnly" />
+  <ElementType name="xpowerlist_AudienceBodyComponents" content="eltOnly" />
+  <ElementType name="xpowercomponent_Body" content="eltOnly" />
+  <ElementType name="xpowerlist_OptionalCenterColumn" content="eltOnly" />
+  <ElementType name="xpowercomponent_Coloumn" content="eltOnly" />
+  <ElementType name="xpowerlist_SubsectionBodyComponents" content="eltOnly" />
+  <ElementType name="xpowercomponent_SubsectionBodyComponent" content="eltOnly" />
+  <ElementType name="EnableContactSalesLink" dt:type="boolean" default="true" content="textOnly" />
+  <ElementType name="EnableContactSupportLink" dt:type="boolean" default="true" content="textOnly" />
+  <ElementType name="xpowerlist_RightRailComponents" content="eltOnly" />
+  <ElementType name="xpowercomponent_Component" content="eltOnly" />
+  <ElementType name="HideRightRail" dt:type="boolean" default="false" content="textOnly" />
+  <ElementType name="PushRightRailInlineWithHeader" dt:type="boolean" content="textOnly" />
+  <ElementType name="xpowergroupstart_ReUseImageGroup" content="eltOnly" />
+  <ElementType name="xpowerasset_Image400x170" content="eltOnly" />
+  <ElementType name="xpowerasset_Image360x270" content="eltOnly" />
+  <ElementType name="xpowerasset_Image156x156" content="eltOnly" />
+  <ElementType name="xpowerasset_Image100x70" content="eltOnly" />
+  <ElementType name="xpowergroupend_" content="eltOnly" />
+  <ElementType name="xpowergroupstart_FootnotesGroup" content="eltOnly" />
+  <ElementType name="NotesTitle" dt:type="string" content="textOnly" />
+  <ElementType name="xhtml_NotesCopy" content="textOnly" />
+  <ElementType name="ReferencesTitle" dt:type="string" content="textOnly" />
+  <ElementType name="xpowerlist_References" content="eltOnly" />
+  <ElementType name="Reference" dt:type="string" content="textOnly" />
+  <ElementType name="xpowergroupstart_SEOGroup" content="eltOnly" />
+  <ElementType name="NavigationOverride" dt:type="string" content="textOnly" />
+  <ElementType name="DescriptiveTitle" dt:type="string" content="textOnly" />
+  <ElementType name="BrowserBarTitle" dt:type="string" content="textOnly" />
+  <ElementType name="MetaDescription" dt:type="string" content="textOnly" />
+  <ElementType name="Keywords" dt:type="string" content="textOnly" />
+  <ElementType name="NoIndex" dt:type="boolean" content="textOnly" />
+  <ElementType name="NoFollow" dt:type="boolean" content="textOnly" />
+  <ElementType name="Priority" dt:type="enumeration" default="0.5" values="0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0" content="textOnly" />
+  <ElementType name="xpowergroupstart_SocialMediaSharing" content="eltOnly" />
+  <ElementType name="Type" dt:type="enumeration" default="website" values="website article" content="textOnly" />
+  <ElementType name="SharingTitle" dt:type="string" content="textOnly" />
+  <ElementType name="SharingDescription" dt:type="string" content="textOnly" />
+  <ElementType name="xpowerasset_SharingImage" content="eltOnly" />
+  <ElementType name="TwitterCard" dt:type="enumeration" default="summary" values="summary photo gallery product app player" content="textOnly" />
+  <ElementType name="TwitterAuthor" dt:type="string" default="@carefusion" content="textOnly" />
+  <ElementType name="xpowerlist_AnalyticsEvents" content="eltOnly" />
+  <ElementType name="xpowercomponent_Event" content="eltOnly" />
+  <ElementType name="xpowergroupstart_CustomScriptsGroup" content="eltOnly" />
+  <ElementType name="HeadScript" dt:type="string" content="textOnly" />
+  <ElementType name="FooterScript" dt:type="string" content="textOnly" />
+  <ElementType name="xpowernavigation_BreadcrumbNavigation" content="eltOnly" />
+  <ElementType name="xpowercomponent_SectionControl" content="eltOnly" />
+  <AttributeType name="QPNumber" dt:type="string" />
+  <AttributeType name="IssueNumber" dt:type="string" default="1" />
+  <AttributeType name="SS" dt:type="boolean" default="true" />
+  <AttributeType name="DSS" dt:type="boolean" default="true" />
+  <AttributeType name="ViewName" dt:type="AudiencePage" default="AudiencePage" />
+  <ElementType name="AudiencePage" content="eltOnly" order="seq">
+    <attribute type="ID" />
+    <attribute type="Name" />
+    <element type="xpowerlist_HeroRotator" UID="a6d5eb5ae8f44eaf93bec20b280d7979" label="Hero Rotator" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_Hero" Component="" CompTypes="HeroComponent;VideoComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="MoveHerotoTop" UID="f5c402356b0f42579fcb0285a05bec1f" label="Move Hero to Top (Deprecated)" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="Title" UID="412a77b7b2f14599acc85772cfcf0461" label="Title" readonly="false" hidden="false" default="" required="true" indexable="false" />
+    <element type="Subtitle" UID="6f767633cc5a4b3ca855506676645309" label="Subtitle" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="Abstract" UID="a2ab774a6524483695d23816b4f854b6" label="Abstract" readonly="false" hidden="false" default="" required="true" indexable="false" />
+    <element type="BrowseTitle" UID="c737d2f7c57d4d3ea2fb2492fce78286" label="Browse Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xpowerasset_ReuseImage" UID="ea4d372792894b35847332b85184d18e" label="Reuse Image" readonly="false" hidden="false" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="LifestyleImage" UID="e1cbe5bb224f4ef58c138e80de58b939" label="Lifestyle Image" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xhtml_BodyCopy" UID="97ea059559e44dafa966e667e48da92d" label="Body Copy" readonly="false" hidden="false" default="" required="false" indexable="false" Height="" />
+    <element type="xpowerlist_AudienceBodyComponents" UID="45f8d3482c3e491c97990db7cac5581c" label="Audience Body Components" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_Body" Component="" CompTypes="AudienceBodyWrapperComponent;AudienceCalltoActionComponent;AudienceCalloutBlockComponent;AudienceComplexRowComponent;AudienceCopyComponent;AudienceExpandableDetailsComponent;AudienceFeaturedProductsComponent;AudienceFeaturedVideosComponent;AudienceFAQListingComponent;AudienceFormComponent;AudienceImageProcessComponent;AudienceInteractiveDetailsComponent;AudienceInteractiveExpandableTopicsComponent;AudienceInteractiveFeaturesBodyComponent;AudienceInteractiveFeaturesComponent;AudienceManualListComponent;AudiencePopularLinksComponent;AudiencePressRotatorComponent;AudienceProductCategoryComponent;AudienceRecommendedProductsListComponent;AudienceResourceBlocksComponent;AudienceResourceSearchComponent;AudienceSectionNavComponent;AudienceStepByStepImageComponent;AudienceStepByStepDetailsComponent;AudienceStoryRotatorComponent;AudienceStoryComponent;AudienceVideoComponent;FlexibleTray;" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="xpowerlist_OptionalCenterColumn" UID="8affa680be9e40c48db2974c823440f2" label="Optional Center Column" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_Coloumn" Component="" CompTypes="AudienceSectionNavComponent;AudienceInteractiveExpandableTopicsComponent;AudienceVideoComponent;AudienceProductCategoryComponent;AudienceStoryComponent;AudiencePressRotatorComponent;AudiencePopularLinksComponent;AudienceCalltoActionComponent;AudienceFeaturedProductsComponent;AudienceRecommendedProductsListComponent;AudienceExpandableDetailsComponent;AudienceInteractiveFeaturesComponent;AudienceResourceBlocksComponent;AudienceCopyComponent;AudienceStepByStepDetailsComponent;AudienceInteractiveDetailsComponent;AudienceImageProcessComponent;AudienceCalloutBlockComponent;AudienceStepByStepImageComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="xpowerlist_SubsectionBodyComponents" UID="dd418b6621b84551a00f2bd0912deea3" label="Subsection Body Components (Deprecated)" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_SubsectionBodyComponent" Component="" CompTypes="ImageBodyComponent;BodyWrapperComponent;ProductCarouselComponent;BenefitsListingBodyComponent;FlexibleBodyComponent;LinkListBodyComponent;LinkCategoryBodyComponent;LinkIndexBodyComponent;InteractiveBodyComponent;InteractiveFeaturesBodyComponent;PopularResourceBodyComponent;TwoColumnBodyComponent;RotatingBodyComponent;ImageInfoComponent;ImageQuoteComponent;CareerButtonComponent;CalltoActionComponent;FullWidthCalloutBodyComponent;SolutionsQuadrantBodyComponent;FeaturedVideosBodyComponent;ManualListBodyComponentImageBodyComponent;BodyWrapperComponent;ProductCarouselComponent;BenefitsListingBodyComponent;FlexibleBodyComponent;LinkListBodyComponent;LinkCategoryBodyComponent;LinkIndexBodyComponent;InteractiveBodyComponent;InteractiveFeaturesBodyComponent;PopularResourceBodyComponent;TwoColumnBodyComponent;RotatingBodyComponent;ImageInfoComponent;ImageQuoteComponent;CareerButtonComponent;CalltoActionComponent;FullWidthCalloutBodyComponent;SolutionsQuadrantBodyComponent;FeaturedVideosBodyComponent;ManualListBodyComponent;AudienceResourceSearchComponent;AudienceStoryRotatorComponent;AudienceBodyWrapperComponent;AudienceSectionNavComponent;AudienceComplexRowComponent;AudienceInteractiveExpandableTopicsComponent;AudienceFAQListingComponent;AudienceVideoComponent;AudienceProductCategoryComponent;AudienceStoryComponent;AudiencePressRotatorComponent;AudiencePopularLinksComponent;AudienceCalltoActionComponent;AudienceFeaturedProductsComponent;AudienceRecommendedProductsListComponent;AudienceExpandableDetailsComponent;AudienceFormComponent;AudienceInteractiveFeaturesComponent;AudienceResourceBlocksComponent;AudienceCopyComponent;AudienceStepByStepDetailsComponent;AudienceInteractiveDetailsComponent;AudienceImageProcessComponent;AudienceCalloutBlockComponent;AudienceManualListComponent;AudienceStepByStepImageComponent;AudienceStepByStepDetailsComponent;AudienceFeaturedVideosComponent;AudienceInteractiveFeaturesBodyComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="EnableContactSalesLink" UID="dd9388cb21d74aee846d76a728a91ee2" label="Enable Contact Sales Link?" readonly="false" hidden="false" default="true" required="false" indexable="false" />
+    <element type="EnableContactSupportLink" UID="d50c594cf5c14697936bb079991cea05" label="Enable Contact Support Link?" readonly="false" hidden="false" default="true" required="false" indexable="false" />
+    <element type="xpowerlist_RightRailComponents" UID="79e6cc40e4554db38709b665a0f83067" label="Right Rail Components" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_Component" Component="" CompTypes="RightRailBlogListingComponent;RightRailDownloadComponent;RightRailEventsCategoryListingComponent;RightRailEventsEditorialListingComponent;RightRailEventsMostRecentListingComponent;RightRailFormInsertComponent;RightRailFormBuilderFormComponent;RightRailListingComponent;RightRailMessageComponent;RightRailNewsListingComponent;RightRailPromoComponent;RightRailRotatingComponents;RightRailPodcastComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="HideRightRail" UID="66dcc7c6b5dd4f629e6d3b34b4efc406" label="Hide Right Rail?" readonly="false" hidden="false" default="false" required="false" indexable="false" />
+    <element type="PushRightRailInlineWithHeader" UID="715a8275b4234c708528d4b6bb1c9a46" label="Push Right Rail Inline With Header" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xpowergroupstart_ReUseImageGroup" UID="161baad4394e4da1b1fc74292cc21561" label="Re-Use Image Group" readonly="false" hidden="true" default="" required="false" indexable="false" Enclosed="false" />
+    <element type="xpowerasset_Image400x170" UID="e42f6a80c6414c33ab45a95e388cf4f0" label="Image 400x170" readonly="false" hidden="true" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="xpowerasset_Image360x270" UID="fb664f2371d6400fa3bf94ea5271a86a" label="Image 360x270" readonly="false" hidden="true" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="xpowerasset_Image156x156" UID="b803d48c033a480ea8ca77e4549553b4" label="Image 156x156" readonly="false" hidden="true" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="xpowerasset_Image100x70" UID="0fb1c3bd9de64aae83351f8236c311f7" label="Image 100x70" readonly="false" hidden="true" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="xpowergroupend_" />
+    <element type="xpowergroupstart_FootnotesGroup" UID="f8f2b841964344c699ca702526679275" label="Footnotes Group" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" />
+    <element type="NotesTitle" UID="5873fe568a414bea9c6fe6f1642b30fe" label="Notes Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xhtml_NotesCopy" UID="c436bba634a94067a53889c7636c8e39" label="Notes Copy" readonly="false" hidden="false" default="" required="false" indexable="false" Height="" />
+    <element type="ReferencesTitle" UID="6c91c573b85f4349ba9eeb2152067849" label="References Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xpowerlist_References" UID="18692df5b8c644b5b9e67678a1d25831" label="References" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" List="Reference" />
+    <element type="xpowergroupend_" />
+    <element type="xpowergroupstart_SEOGroup" UID="980f6c3205d447df8dbf1b427dc99e35" label="SEO Group" readonly="false" hidden="true" default="" required="false" indexable="false" Enclosed="false" />
+    <element type="NavigationOverride" UID="fd98cb89b2f840dab642dde835bc703a" label="Navigation Override" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="DescriptiveTitle" UID="b81e1414567c46c6bbafc575fea2f944" label="Descriptive Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="BrowserBarTitle" UID="7496a69f62cb43bb9cd7e4c84e6a39f5" label="Browser Bar Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="MetaDescription" UID="e5b499ffaace4619a8068df4f7ca7f6e" label="Meta Description" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="Keywords" UID="4b36fdcd1b1a43ea8fa85f62051beca3" label="Keywords" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="NoIndex" UID="3fc5e38b0f2f401ca1714e8a8789b282" label="No Index" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="NoFollow" UID="5b7e50fff2ec4818afde91273565e17b" label="No Follow" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="Priority" UID="21a57babc006447a80d4158fd5800337" label="Priority" readonly="false" hidden="false" default="0.5" required="false" indexable="false" values="0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0" />
+    <element type="xpowergroupstart_SocialMediaSharing" UID="d0afe2b8540e43c6933b57367d1e0d3c" label="Social Media Sharing" readonly="false" hidden="false" default="" required="false" indexable="false" Enclosed="false" />
+    <element type="Type" UID="cceb01ba9b064f9fa3104600db0b180f" label="Type" readonly="false" hidden="false" default="website" required="false" indexable="false" values="website article" />
+    <element type="SharingTitle" UID="0f98f8a0ba58471c84bc7db5c310fe48" label="Sharing Title" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="SharingDescription" UID="1ddc25374ab54361aacc80a954893e15" label="Sharing Description" readonly="false" hidden="false" default="" required="false" indexable="false" />
+    <element type="xpowerasset_SharingImage" UID="5520a6ccc3ff4c49adc8f4725b098ce2" label="Sharing Image" readonly="false" hidden="false" default="" required="false" indexable="false" Asset="" AssetTypes="Image|Binary" />
+    <element type="TwitterCard" UID="5c5e2c9749464f00b82c005161444408" label="Twitter Card" readonly="false" hidden="false" default="summary" required="false" indexable="false" values="summary photo gallery product app player" />
+    <element type="TwitterAuthor" UID="14ba25e9298d494c8256fff9789fdd71" label="Twitter Creator" readonly="false" hidden="false" default="@carefusion" required="false" indexable="false" />
+    <element type="xpowergroupend_" />
+    <element type="xpowerlist_AnalyticsEvents" UID="5c9b7275f9314037b21d7c96aaee9b4b" label="Analytics Events" readonly="false" hidden="true" default="" required="false" indexable="false" Enclosed="false" List="xpowercomponent_Event" Component="" CompTypes="PageEventTrackingComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <element type="xpowergroupend_" />
+    <element type="xpowergroupstart_CustomScriptsGroup" UID="50c6fa3bda78408cb0bd0f787a53c79e" label="Custom Scripts Group" readonly="false" hidden="true" default="" required="false" indexable="false" Enclosed="false" />
+    <element type="HeadScript" UID="f2633039a6494d52adeee3989a06b87e" label="Head Script" readonly="true" hidden="true" default="" required="false" indexable="false" />
+    <element type="FooterScript" UID="738f0aad1bb4488e8565a4c44f6a3424" label="Footer Script" readonly="true" hidden="true" default="" required="false" indexable="false" />
+    <element type="xpowergroupend_" />
+    <element type="xpowernavigation_BreadcrumbNavigation" UID="33e1d128ac694594aaead6c763ef420e" label="Breadcrumb Navigation" readonly="true" hidden="true" default="" required="true" indexable="false" Expanded="false" Navigation="Ancestors" GenerationOrder="down" StartPage="" MaxNodes="" MaxDepth="" Query="">
+      <element type="Exports" default="" />
+    </element>
+    <element type="xpowercomponent_SectionControl" UID="e1ef77853a204bd4a4ad7997b16cf51f" label="Section Control" readonly="true" hidden="true" default="" required="true" indexable="false" Component="" CompTypes="SectionControlComponent" AutoEmbed="false" LockEmbedState="false" WrappedUp="false" />
+    <attribute type="QPNumber" UID="71b57593014445f08f1d63faa51421e7" label="" readonly="false" hidden="false" required="false" indexable="false" />
+    <attribute type="IssueNumber" UID="6d061e8b3ffc42909d12a34dad1933b3" label="" readonly="false" hidden="false" default="1" required="false" indexable="false" />
+  </ElementType>
+</Schema>

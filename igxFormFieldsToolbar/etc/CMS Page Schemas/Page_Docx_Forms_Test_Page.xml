@@ -1,0 +1,24 @@
+<Schema xmlns:dt="urn:schemas-microsoft-com:datatypes" name="DocxFormsTestPage" xmlns="urn:schemas-microsoft-com:xml-data">
+  <AttributeType name="ID" dt:type="id" required="yes" />
+  <AttributeType name="Name" dt:type="string" required="yes" />
+  <AttributeType name="UniqueID" dt:type="int" default="schemas/545" />
+  <AttributeType name="Icon" dt:type="int" default="2" />
+  <AttributeType name="FriendlyName" dt:type="string" default="Docx Forms Test Page" />
+  <AttributeType name="DefaultCategorization" dt:type="string" default="" />
+  <AttributeType name="Version" dt:type="int" default="3" />
+  <AttributeType name="LastModifiedUser" dt:type="string" default="User/jallard" />
+  <AttributeType name="SS" dt:type="boolean" default="true" />
+  <AttributeType name="DSS" dt:type="boolean" default="true" />
+  <AttributeType name="ViewName" dt:type="DocxFormsTestPage" default="DocxFormsTestPage" />
+  
+  <ElementType name="Exports" content="textOnly" />
+  <ElementType name="Title" dt:type="string" content="textOnly" />
+  <ElementType name="Abstract" dt:type="string" content="textOnly" />
+  
+  <ElementType name="DocxFormsTestPage" content="eltOnly" order="seq">
+    <attribute type="ID" />
+    <attribute type="Name" />
+    <element type="Title" UID="f4c927e1e4d243298e837b384561f3b5" label="Title" readonly="false" hidden="false" required="false" indexable="false" />
+    <element type="Abstract" UID="17fbace68de74f5e85dac2178910fc48" label="Abstract" readonly="false" hidden="false" required="false" indexable="false" />
+  </ElementType>
+</Schema>
