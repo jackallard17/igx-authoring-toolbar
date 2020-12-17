@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IngeniuxCMService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ingeniux.CMS" />
+  <xs:complexType name="XHRServiceResponseGenericOfFileUploadResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FileUploadResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:FileUploadResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfFileUploadResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfFileUploadResultk3WotQuK" />
+  <xs:simpleType name="XHRResponseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESS" />
+      <xs:enumeration value="SESSION_EXPIRED" />
+      <xs:enumeration value="PROCESSING_ERROR" />
+      <xs:enumeration value="CANCELLED" />
+      <xs:enumeration value="CONTENT_FREEZE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="XHRResponseType" nillable="true" type="tns:XHRResponseType" />
+  <xs:complexType name="FileUploadResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uploadedFiles" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileUploadResult" nillable="true" type="tns:FileUploadResult" />
+  <xs:complexType name="XHRServiceResponseGenericOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfstring" nillable="true" type="tns:XHRServiceResponseGenericOfstring" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaFieldsGroupedListingk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaFieldsGroupedListing" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaFieldsGroupedListing" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaFieldsGroupedListingk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaFieldsGroupedListingk3WotQuK" />
+  <xs:complexType name="SchemaFieldsGroupedListing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfSchemaFieldGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldsGroupedListing" nillable="true" type="tns:SchemaFieldsGroupedListing" />
+  <xs:complexType name="ArrayOfSchemaFieldGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldGroup" nillable="true" type="tns:SchemaFieldGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldGroup" nillable="true" type="tns:ArrayOfSchemaFieldGroup" />
+  <xs:complexType name="SchemaFieldGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldTypes" nillable="true" type="tns:ArrayOfSchemaFieldTypeObject" />
+      <xs:element minOccurs="0" name="GroupLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldGroup" nillable="true" type="tns:SchemaFieldGroup" />
+  <xs:complexType name="ArrayOfSchemaFieldTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldTypeObject" nillable="true" type="tns:SchemaFieldTypeObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldTypeObject" nillable="true" type="tns:ArrayOfSchemaFieldTypeObject" />
+  <xs:complexType name="SchemaFieldTypeObject">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AllowedItemTypes" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ElementTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasExports" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsXpower" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfSchemaFieldTypePropertyEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldTypeObject" nillable="true" type="tns:SchemaFieldTypeObject" />
+  <xs:complexType name="ArrayOfSchemaFieldTypePropertyEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldTypePropertyEntry" nillable="true" type="tns:SchemaFieldTypePropertyEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldTypePropertyEntry" nillable="true" type="tns:ArrayOfSchemaFieldTypePropertyEntry" />
+  <xs:complexType name="SchemaFieldTypePropertyEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChoicesValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldTypePropertyEntry" nillable="true" type="tns:SchemaFieldTypePropertyEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfArrayOfSchemaFavoriteEntryk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfSchemaFavoriteEntry" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:ArrayOfSchemaFavoriteEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfArrayOfSchemaFavoriteEntryk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfArrayOfSchemaFavoriteEntryk3WotQuK" />
+  <xs:complexType name="ArrayOfSchemaFavoriteEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFavoriteEntry" nillable="true" type="tns:SchemaFavoriteEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFavoriteEntry" nillable="true" type="tns:ArrayOfSchemaFavoriteEntry" />
+  <xs:complexType name="SchemaFavoriteEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfSchemaFavoriteField" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPublic" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFavoriteEntry" nillable="true" type="tns:SchemaFavoriteEntry" />
+  <xs:complexType name="ArrayOfSchemaFavoriteField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFavoriteField" nillable="true" type="tns:SchemaFavoriteField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFavoriteField" nillable="true" type="tns:ArrayOfSchemaFavoriteField" />
+  <xs:complexType name="SchemaFavoriteField">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AllowedItemTypes" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ChildElementLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildElementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildElementTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildProperties" nillable="true" type="tns:ArrayOfSchemaFieldAttributeEntry" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exports" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasExports" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HelpText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IconName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Indexable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsXpower" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfSchemaFieldAttributeEntry" />
+      <xs:element minOccurs="0" name="Readonly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFavoriteField" nillable="true" type="tns:SchemaFavoriteField" />
+  <xs:complexType name="ArrayOfSchemaFieldAttributeEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldAttributeEntry" nillable="true" type="tns:SchemaFieldAttributeEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldAttributeEntry" nillable="true" type="tns:ArrayOfSchemaFieldAttributeEntry" />
+  <xs:complexType name="SchemaFieldAttributeEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaFieldTypePropertyEntry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaFieldAttributeEntry" nillable="true" type="tns:SchemaFieldAttributeEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaFavoriteEntryk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaFavoriteEntry" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaFavoriteEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaFavoriteEntryk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaFavoriteEntryk3WotQuK" />
+  <xs:complexType name="SchemaPublicSetRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FavoriteID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToBePublic" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaPublicSetRequest" nillable="true" type="tns:SchemaPublicSetRequest" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaPublicSetRequestk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaPublicSetRequest" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaPublicSetRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaPublicSetRequestk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaPublicSetRequestk3WotQuK" />
+  <xs:complexType name="SchemaChangeEffortAnalysisRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:ArrayOfSchemaChangeEffortPageRequest" />
+      <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaChangeEffortAnalysisRequest" nillable="true" type="tns:SchemaChangeEffortAnalysisRequest" />
+  <xs:complexType name="ArrayOfSchemaChangeEffortPageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaChangeEffortPageRequest" nillable="true" type="tns:SchemaChangeEffortPageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaChangeEffortPageRequest" nillable="true" type="tns:ArrayOfSchemaChangeEffortPageRequest" />
+  <xs:complexType name="SchemaChangeEffortPageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignedGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssignedUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckedOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaChangeEffortPageRequest" nillable="true" type="tns:SchemaChangeEffortPageRequest" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaChangeEffortAnalysisResponse" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaChangeEffortAnalysisResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK" />
+  <xs:complexType name="SchemaChangeEffortAnalysisResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncListingInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChangeEfforts" nillable="true" type="tns:ArrayOfSchemaChangeEffortPageEntry" />
+          <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemaRootName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaChangeEffortAnalysisResponse" nillable="true" type="tns:SchemaChangeEffortAnalysisResponse" />
+  <xs:complexType name="SchemaSyncListingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasPresentation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPageSchema" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncListingInfo" nillable="true" type="tns:SchemaSyncListingInfo" />
+  <xs:complexType name="ArrayOfSchemaChangeEffortPageEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaChangeEffortPageEntry" nillable="true" type="tns:SchemaChangeEffortPageEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaChangeEffortPageEntry" nillable="true" type="tns:ArrayOfSchemaChangeEffortPageEntry" />
+  <xs:complexType name="SchemaChangeEffortPageEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PageID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaChangeEffortPageEntry" nillable="true" type="tns:SchemaChangeEffortPageEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemasSimpleListResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemasSimpleListResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemasSimpleListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemasSimpleListResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemasSimpleListResultk3WotQuK" />
+  <xs:complexType name="SchemasSimpleListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="assetSchemas" nillable="true" type="tns:ArrayOfSchemaInfo" />
+      <xs:element minOccurs="0" name="compSchemas" nillable="true" type="tns:ArrayOfSchemaInfo" />
+      <xs:element minOccurs="0" name="pageSchemas" nillable="true" type="tns:ArrayOfSchemaInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemasSimpleListResult" nillable="true" type="tns:SchemasSimpleListResult" />
+  <xs:complexType name="ArrayOfSchemaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaInfo" nillable="true" type="tns:SchemaInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaInfo" nillable="true" type="tns:ArrayOfSchemaInfo" />
+  <xs:complexType name="SchemaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsComponent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaInfo" nillable="true" type="tns:SchemaInfo" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemasListResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemasListResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemasListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemasListResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemasListResultk3WotQuK" />
+  <xs:complexType name="SchemasListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="assetSchemas" nillable="true" type="tns:ArrayOfSchemaInfoExtended" />
+      <xs:element minOccurs="0" name="compSchemas" nillable="true" type="tns:ArrayOfSchemaInfoExtended" />
+      <xs:element minOccurs="0" name="invalidSchemas" nillable="true" type="tns:ArrayOfInvalidSchemaInfo" />
+      <xs:element minOccurs="0" name="pageSchemas" nillable="true" type="tns:ArrayOfSchemaInfoExtended" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemasListResult" nillable="true" type="tns:SchemasListResult" />
+  <xs:complexType name="ArrayOfSchemaInfoExtended">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaInfoExtended" nillable="true" type="tns:SchemaInfoExtended" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaInfoExtended" nillable="true" type="tns:ArrayOfSchemaInfoExtended" />
+  <xs:complexType name="SchemaInfoExtended">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="Drafting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasPresentation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModified" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Root" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaInfoExtended" nillable="true" type="tns:SchemaInfoExtended" />
+  <xs:complexType name="ArrayOfInvalidSchemaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvalidSchemaInfo" nillable="true" type="tns:InvalidSchemaInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvalidSchemaInfo" nillable="true" type="tns:ArrayOfInvalidSchemaInfo" />
+  <xs:complexType name="InvalidSchemaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidSchemaInfo" nillable="true" type="tns:InvalidSchemaInfo" />
+  <xs:complexType name="SchemasDeleteInput">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemasDeleteInput" nillable="true" type="tns:SchemasDeleteInput" />
+  <xs:complexType name="XHRServiceResponseGenericOfArrayOfstringuHEDJ7Dj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfstring" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="message" nillable="true" type="q5:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfArrayOfstringuHEDJ7Dj" nillable="true" type="tns:XHRServiceResponseGenericOfArrayOfstringuHEDJ7Dj" />
+  <xs:complexType name="SchemaDetailGetInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="schemaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaDetailGetInput" nillable="true" type="tns:SchemaDetailGetInput" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaDetailsk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaDetails" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaDetailsk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaDetailsk3WotQuK" />
+  <xs:complexType name="SchemaDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowedCategoryRootIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllowedCategoryRoots" nillable="true" type="tns:ArrayOfSchemaCategoryInfo" />
+      <xs:element minOccurs="0" name="BlockedGroups" nillable="true" type="tns:ArrayOfUniqueObjectWithCount" />
+      <xs:element minOccurs="0" name="CUInstSettings" nillable="true" type="tns:SchemaContentUnitInstantiability" />
+      <xs:element minOccurs="0" name="DefaultCategories" nillable="true" type="tns:ArrayOfSchemaCategoryInfo" />
+      <xs:element minOccurs="0" name="DefaultCategoryIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Drafting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Extensions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfSchemaFieldInfo" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Icon" type="xs:int" />
+      <xs:element minOccurs="0" name="Indexable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAssetSchema" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsComponent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDynamicSitePage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNewSchema" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSystemSchema" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxFileSize" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxVersionStorage" type="xs:double" />
+      <xs:element minOccurs="0" name="OriginPageId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginPageNoPresentation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PagesCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PresentationsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="RootName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stylesheet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumbnailPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+      <xs:element minOccurs="0" name="VersionsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="VersionsList" nillable="true" type="tns:ArrayOfSchemaVersionInfo" />
+      <xs:element minOccurs="0" name="ViewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkflowDefinitionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkflowDefinitions" nillable="true" type="tns:ArrayOfUniqueObjectC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaDetails" nillable="true" type="tns:SchemaDetails" />
+  <xs:complexType name="ArrayOfSchemaCategoryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaCategoryInfo" nillable="true" type="tns:SchemaCategoryInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaCategoryInfo" nillable="true" type="tns:ArrayOfSchemaCategoryInfo" />
+  <xs:complexType name="SchemaCategoryInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SynonymsCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaCategoryInfo" nillable="true" type="tns:SchemaCategoryInfo" />
+  <xs:complexType name="UniqueObjectC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UniqueObjectC" nillable="true" type="tns:UniqueObjectC" />
+  <xs:complexType name="ArrayOfUniqueObjectWithCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UniqueObjectWithCount" nillable="true" type="tns:UniqueObjectWithCount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUniqueObjectWithCount" nillable="true" type="tns:ArrayOfUniqueObjectWithCount" />
+  <xs:complexType name="UniqueObjectWithCount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UniqueObjectWithCount" nillable="true" type="tns:UniqueObjectWithCount" />
+  <xs:complexType name="UniqueObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NamedObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UniqueObject" nillable="true" type="tns:UniqueObject" />
+  <xs:complexType name="NamedObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NamedObject" nillable="true" type="tns:NamedObject" />
+  <xs:complexType name="SchemaContentUnitInstantiability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowedCUs" nillable="true" type="tns:ArrayOfContentUnitInfo" />
+      <xs:element minOccurs="0" name="RepLimits" nillable="true" type="tns:ArrayOfContentUnitReuseLimit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaContentUnitInstantiability" nillable="true" type="tns:SchemaContentUnitInstantiability" />
+  <xs:complexType name="ArrayOfContentUnitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContentUnitInfo" nillable="true" type="tns:ContentUnitInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContentUnitInfo" nillable="true" type="tns:ArrayOfContentUnitInfo" />
+  <xs:complexType name="ContentUnitInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsComp" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContentUnitInfo" nillable="true" type="tns:ContentUnitInfo" />
+  <xs:complexType name="ArrayOfContentUnitReuseLimit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContentUnitReuseLimit" nillable="true" type="tns:ContentUnitReuseLimit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContentUnitReuseLimit" nillable="true" type="tns:ArrayOfContentUnitReuseLimit" />
+  <xs:complexType name="ContentUnitReuseLimit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ContentUnitInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MaxReuse" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContentUnitReuseLimit" nillable="true" type="tns:ContentUnitReuseLimit" />
+  <xs:complexType name="ArrayOfSchemaFieldInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldInfo" nillable="true" type="tns:SchemaFieldInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldInfo" nillable="true" type="tns:ArrayOfSchemaFieldInfo" />
+  <xs:complexType name="SchemaFieldInfo">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AllowedItemTypes" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ChildElementLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildElementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildElementTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildProperties" nillable="true" type="tns:ArrayOfSchemaFieldProperty" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisallowReadonlyOrHidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ElementTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exports" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasExports" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HelpText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IconName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Indexable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsXpower" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfSchemaFieldProperty" />
+      <xs:element minOccurs="0" name="QuickEditable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Readonly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResersedContentUnitField" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldInfo" nillable="true" type="tns:SchemaFieldInfo" />
+  <xs:complexType name="ArrayOfSchemaFieldProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaFieldProperty" nillable="true" type="tns:SchemaFieldProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaFieldProperty" nillable="true" type="tns:ArrayOfSchemaFieldProperty" />
+  <xs:complexType name="SchemaFieldProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Choices" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaFieldProperty" nillable="true" type="tns:SchemaFieldProperty" />
+  <xs:complexType name="ArrayOfSchemaVersionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaVersionInfo" nillable="true" type="tns:SchemaVersionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaVersionInfo" nillable="true" type="tns:ArrayOfSchemaVersionInfo" />
+  <xs:complexType name="SchemaVersionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaVersionInfo" nillable="true" type="tns:SchemaVersionInfo" />
+  <xs:complexType name="ArrayOfUniqueObjectC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UniqueObjectC" nillable="true" type="tns:UniqueObjectC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUniqueObjectC" nillable="true" type="tns:ArrayOfUniqueObjectC" />
+  <xs:complexType name="SchemaDetailsInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaDetails">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Ingeniux.CMS" minOccurs="0" name="AssetType" type="q7:AssetType" />
+          <xs:element minOccurs="0" name="RemovePresentations" type="xs:boolean" />
+          <xs:element minOccurs="0" name="saveNewVersion" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaDetailsInput" nillable="true" type="tns:SchemaDetailsInput" />
+  <xs:complexType name="SchemaPagesGetInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaPagesGetInput" nillable="true" type="tns:SchemaPagesGetInput" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaPagesk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaPages" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaPages" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaPagesk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaPagesk3WotQuK" />
+  <xs:complexType name="SchemaPages">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncListingInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:ArrayOfSchemaPageEntry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaPages" nillable="true" type="tns:SchemaPages" />
+  <xs:complexType name="ArrayOfSchemaPageEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaPageEntry" nillable="true" type="tns:SchemaPageEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaPageEntry" nillable="true" type="tns:ArrayOfSchemaPageEntry" />
+  <xs:complexType name="SchemaPageEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignedGroup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckedOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasPresentation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Icon" type="xs:int" />
+          <xs:element minOccurs="0" name="PresentationStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RootName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemaVersion" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:int" />
+          <xs:element minOccurs="0" name="SyncPresentation" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaPageEntry" nillable="true" type="tns:SchemaPageEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaAssetsk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaAssets" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaAssets" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaAssetsk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaAssetsk3WotQuK" />
+  <xs:complexType name="SchemaAssets">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncListingInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Assets" nillable="true" type="tns:ArrayOfSchemaAssetEntry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaAssets" nillable="true" type="tns:SchemaAssets" />
+  <xs:complexType name="ArrayOfSchemaAssetEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaAssetEntry" nillable="true" type="tns:SchemaAssetEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaAssetEntry" nillable="true" type="tns:ArrayOfSchemaAssetEntry" />
+  <xs:complexType name="SchemaAssetEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignedGroup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckedOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Icon" type="xs:int" />
+          <xs:element minOccurs="0" name="RootName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemaVersion" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaAssetEntry" nillable="true" type="tns:SchemaAssetEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaComponentEmbedsk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaComponentEmbeds" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaComponentEmbeds" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaComponentEmbedsk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaComponentEmbedsk3WotQuK" />
+  <xs:complexType name="SchemaComponentEmbeds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentEmbeds" nillable="true" type="tns:ArrayOfSchemaEmbedComponent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaComponentEmbeds" nillable="true" type="tns:SchemaComponentEmbeds" />
+  <xs:complexType name="ArrayOfSchemaEmbedComponent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaEmbedComponent" nillable="true" type="tns:SchemaEmbedComponent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaEmbedComponent" nillable="true" type="tns:ArrayOfSchemaEmbedComponent" />
+  <xs:complexType name="SchemaEmbedComponent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CheckedOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Icon" type="xs:int" />
+          <xs:element minOccurs="0" name="PageId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemaVersion" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaEmbedComponent" nillable="true" type="tns:SchemaEmbedComponent" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaComponentUnitsk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaComponentUnits" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaComponentUnits" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaComponentUnitsk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaComponentUnitsk3WotQuK" />
+  <xs:complexType name="SchemaComponentUnits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Units" nillable="true" type="tns:ArrayOfSchemaOutofSyncComponentUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaComponentUnits" nillable="true" type="tns:SchemaComponentUnits" />
+  <xs:complexType name="ArrayOfSchemaOutofSyncComponentUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaOutofSyncComponentUnit" nillable="true" type="tns:SchemaOutofSyncComponentUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaOutofSyncComponentUnit" nillable="true" type="tns:ArrayOfSchemaOutofSyncComponentUnit" />
+  <xs:complexType name="SchemaOutofSyncComponentUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UniqueObjectC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SchemaVersion" type="xs:int" />
+          <xs:element minOccurs="0" name="Score" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaOutofSyncComponentUnit" nillable="true" type="tns:SchemaOutofSyncComponentUnit" />
+  <xs:complexType name="SchemaSyncRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:ArrayOfSchemaSyncPageEntry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaSyncRequest" nillable="true" type="tns:SchemaSyncRequest" />
+  <xs:complexType name="SchemaSyncRequestBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowImmediateCheckin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OverwriteRootAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemaRootName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SyncWithoutCheckout" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncRequestBase" nillable="true" type="tns:SchemaSyncRequestBase" />
+  <xs:complexType name="ArrayOfSchemaSyncPageEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncPageEntry" nillable="true" type="tns:SchemaSyncPageEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncPageEntry" nillable="true" type="tns:ArrayOfSchemaSyncPageEntry" />
+  <xs:complexType name="SchemaSyncPageEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SyncPres" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncPageEntry" nillable="true" type="tns:SchemaSyncPageEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaPagesSyncResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaPagesSyncResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaPagesSyncResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaPagesSyncResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaPagesSyncResultk3WotQuK" />
+  <xs:complexType name="SchemaPagesSyncResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncListingInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorPages" nillable="true" type="tns:ArrayOfSchemaSyncPageError" />
+          <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemaRootName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SuccessPageIDs" nillable="true" type="q8:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaPagesSyncResult" nillable="true" type="tns:SchemaPagesSyncResult" />
+  <xs:complexType name="ArrayOfSchemaSyncPageError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncPageError" nillable="true" type="tns:SchemaSyncPageError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncPageError" nillable="true" type="tns:ArrayOfSchemaSyncPageError" />
+  <xs:complexType name="SchemaSyncPageError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncPageError" nillable="true" type="tns:SchemaSyncPageError" />
+  <xs:complexType name="SchemaSyncComponentEmbedRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:ArrayOfSchemaSyncComponentEmbedEntry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentEmbedRequest" nillable="true" type="tns:SchemaSyncComponentEmbedRequest" />
+  <xs:complexType name="ArrayOfSchemaSyncComponentEmbedEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncComponentEmbedEntry" nillable="true" type="tns:SchemaSyncComponentEmbedEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncComponentEmbedEntry" nillable="true" type="tns:ArrayOfSchemaSyncComponentEmbedEntry" />
+  <xs:complexType name="SchemaSyncComponentEmbedEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldFullID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentEmbedEntry" nillable="true" type="tns:SchemaSyncComponentEmbedEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaComponentEmbedSyncResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaComponentEmbedSyncResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaComponentEmbedSyncResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaComponentEmbedSyncResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaComponentEmbedSyncResultk3WotQuK" />
+  <xs:complexType name="SchemaComponentEmbedSyncResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfSchemaSyncComponentEmbedError" />
+      <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemaRootName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successes" nillable="true" type="tns:ArrayOfSchemaSyncComponentEmbedEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaComponentEmbedSyncResult" nillable="true" type="tns:SchemaComponentEmbedSyncResult" />
+  <xs:complexType name="ArrayOfSchemaSyncComponentEmbedError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncComponentEmbedError" nillable="true" type="tns:SchemaSyncComponentEmbedError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncComponentEmbedError" nillable="true" type="tns:ArrayOfSchemaSyncComponentEmbedError" />
+  <xs:complexType name="SchemaSyncComponentEmbedError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncComponentEmbedEntry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentEmbedError" nillable="true" type="tns:SchemaSyncComponentEmbedError" />
+  <xs:complexType name="SchemaSyncComponentUnitRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:ArrayOfSchemaSyncComponentUnitEntry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentUnitRequest" nillable="true" type="tns:SchemaSyncComponentUnitRequest" />
+  <xs:complexType name="ArrayOfSchemaSyncComponentUnitEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncComponentUnitEntry" nillable="true" type="tns:SchemaSyncComponentUnitEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncComponentUnitEntry" nillable="true" type="tns:ArrayOfSchemaSyncComponentUnitEntry" />
+  <xs:complexType name="SchemaSyncComponentUnitEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnitID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentUnitEntry" nillable="true" type="tns:SchemaSyncComponentUnitEntry" />
+  <xs:complexType name="XHRServiceResponseGenericOfSchemaComponentUnitSyncResultk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SchemaComponentUnitSyncResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:SchemaComponentUnitSyncResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfSchemaComponentUnitSyncResultk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfSchemaComponentUnitSyncResultk3WotQuK" />
+  <xs:complexType name="SchemaComponentUnitSyncResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfSchemaSyncComponentUnitError" />
+      <xs:element minOccurs="0" name="SchemaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemaRootName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successes" nillable="true" type="tns:ArrayOfSchemaSyncComponentUnitEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemaComponentUnitSyncResult" nillable="true" type="tns:SchemaComponentUnitSyncResult" />
+  <xs:complexType name="ArrayOfSchemaSyncComponentUnitError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemaSyncComponentUnitError" nillable="true" type="tns:SchemaSyncComponentUnitError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemaSyncComponentUnitError" nillable="true" type="tns:ArrayOfSchemaSyncComponentUnitError" />
+  <xs:complexType name="SchemaSyncComponentUnitError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchemaSyncComponentUnitEntry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchemaSyncComponentUnitError" nillable="true" type="tns:SchemaSyncComponentUnitError" />
+  <xs:complexType name="ContentUnitsFilter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DojoGridPaginatedRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeComponetUnits" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeFieldUnits" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NameFilter" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContentUnitsFilter" nillable="true" type="tns:ContentUnitsFilter" />
+  <xs:complexType name="DojoGridPaginatedRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="count" type="xs:int" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="start" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DojoGridPaginatedRequest" nillable="true" type="tns:DojoGridPaginatedRequest" />
+  <xs:complexType name="XHRServiceResponseGenericOfContentUnitsGridResponsek3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ContentUnitsGridResponse" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:ContentUnitsGridResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfContentUnitsGridResponsek3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfContentUnitsGridResponsek3WotQuK" />
+  <xs:complexType name="ContentUnitsGridResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Units" nillable="true" type="tns:ArrayOfContentUnitInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContentUnitsGridResponse" nillable="true" type="tns:ContentUnitsGridResponse" />
+  <xs:complexType name="XHRServiceResponseGenericOfArrayOfUniqueObjectWithCountk3WotQuK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfUniqueObjectWithCount" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="tns:ArrayOfUniqueObjectWithCount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfArrayOfUniqueObjectWithCountk3WotQuK" nillable="true" type="tns:XHRServiceResponseGenericOfArrayOfUniqueObjectWithCountk3WotQuK" />
+</xs:schema>

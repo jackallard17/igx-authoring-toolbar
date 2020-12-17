@@ -9,6 +9,7 @@ namespace igxFormFieldsToolbar.Models
     public class SchemaField
     {
         public string TypeName { get; set; }
+        public string Name { get; set; }
         public string Label { get; set; }
         public bool Required { get; set; }
     }

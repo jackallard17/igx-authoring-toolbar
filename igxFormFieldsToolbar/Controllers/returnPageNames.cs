@@ -18,9 +18,9 @@ namespace igxFormFieldsToolbar
 
             foreach (var item in schemaList)
             {
-                if(item.isComponent == false)
+                if(item.IsComponent == false)
                 {
-                    pagesFriendlyNames.Add(item.friendlyName);
+                    pagesFriendlyNames.Add(item.FriendlyName);
                 }
 
             }

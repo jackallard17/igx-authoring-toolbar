@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ingeniux.CMS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ingeniux.CMS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AssetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Binary" />
+      <xs:enumeration value="Code" />
+      <xs:enumeration value="Css" />
+      <xs:enumeration value="Json" />
+      <xs:enumeration value="Text" />
+      <xs:enumeration value="Xml" />
+      <xs:enumeration value="XsltStylesheet" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Image" />
+      <xs:enumeration value="Audio" />
+      <xs:enumeration value="Video" />
+      <xs:enumeration value="View" />
+      <xs:enumeration value="Html" />
+      <xs:enumeration value="Js" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetType" nillable="true" type="tns:AssetType" />
+</xs:schema>

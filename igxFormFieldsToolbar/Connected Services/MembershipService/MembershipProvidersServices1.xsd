@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:IngeniuxCMService" elementFormDefault="qualified" targetNamespace="urn:IngeniuxCMService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+  <xs:element name="GetMembershipProviders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembershipProvidersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetMembershipProvidersResult" nillable="true" type="q1:XHRServiceResponseGenericOfMembershipProvidersListsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAdDefaultProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAdDefaultProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="IsAdDefaultProviderResult" nillable="true" type="q2:XHRServiceResponseGenericOfMembershipIsAdDefaultOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetADQueryDefaults">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetADQueryDefaultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetADQueryDefaultsResult" nillable="true" type="q3:XHRServiceResponseGenericOfADQueryDefaultsOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bindUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bindPass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchQuery" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupNameField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupUsersField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userIdField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userNameField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userEmailField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="providerName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryADResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="QueryADResult" nillable="true" type="q4:XHRServiceResponseGenericOfQueryADResultsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="ChangePasswordResult" nillable="true" type="q5:XHRServiceResponseGenericOfChangePasswordOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="CreateUserResult" nillable="true" type="q6:XHRServiceResponseGenericOfCreateUserOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integratedUsers" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="DeleteUsersResult" nillable="true" type="q7:XHRServiceResponseGenericOfDeleteUsersOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="ResetPasswordResult" nillable="true" type="q8:XHRServiceResponseGenericOfResetPasswordOutputsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegratedProvider">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegratedProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetIntegratedProviderResult" nillable="true" type="q9:XHRServiceResponseGenericOfMembershipProvidersListsrvEL3N0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="membershipProviderName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="LoginResult" nillable="true" type="q10:XHRServiceResponseGenericOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

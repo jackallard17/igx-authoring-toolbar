@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:IngeniuxCMService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:IngeniuxCMService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:IngeniuxCMService/Imports">
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd0" namespace="urn:IngeniuxCMService" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MembershipProvidersServices_GetMembershipProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembershipProviders" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_GetMembershipProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembershipProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_IsAdDefaultProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdDefaultProvider" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_IsAdDefaultProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdDefaultProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_GetADQueryDefaults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetADQueryDefaults" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_GetADQueryDefaults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetADQueryDefaultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_QueryAD_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAD" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_QueryAD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryADResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_DeleteUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsers" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_DeleteUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_GetIntegratedProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegratedProvider" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_GetIntegratedProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegratedProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="MembershipProvidersServices_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MembershipProvidersServices">
+    <wsdl:operation name="GetMembershipProviders">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetMembershipProviders" message="tns:MembershipProvidersServices_GetMembershipProviders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetMembershipProvidersResponse" message="tns:MembershipProvidersServices_GetMembershipProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAdDefaultProvider">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/IsAdDefaultProvider" message="tns:MembershipProvidersServices_IsAdDefaultProvider_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/IsAdDefaultProviderResponse" message="tns:MembershipProvidersServices_IsAdDefaultProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetADQueryDefaults">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetADQueryDefaults" message="tns:MembershipProvidersServices_GetADQueryDefaults_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetADQueryDefaultsResponse" message="tns:MembershipProvidersServices_GetADQueryDefaults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAD">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/QueryAD" message="tns:MembershipProvidersServices_QueryAD_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/QueryADResponse" message="tns:MembershipProvidersServices_QueryAD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/ChangePassword" message="tns:MembershipProvidersServices_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/ChangePasswordResponse" message="tns:MembershipProvidersServices_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/CreateUser" message="tns:MembershipProvidersServices_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/CreateUserResponse" message="tns:MembershipProvidersServices_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsers">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/DeleteUsers" message="tns:MembershipProvidersServices_DeleteUsers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/DeleteUsersResponse" message="tns:MembershipProvidersServices_DeleteUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/ResetPassword" message="tns:MembershipProvidersServices_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/ResetPasswordResponse" message="tns:MembershipProvidersServices_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegratedProvider">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetIntegratedProvider" message="tns:MembershipProvidersServices_GetIntegratedProvider_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/GetIntegratedProviderResponse" message="tns:MembershipProvidersServices_GetIntegratedProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/Login" message="tns:MembershipProvidersServices_Login_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/MembershipProvidersServices/LoginResponse" message="tns:MembershipProvidersServices_Login_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

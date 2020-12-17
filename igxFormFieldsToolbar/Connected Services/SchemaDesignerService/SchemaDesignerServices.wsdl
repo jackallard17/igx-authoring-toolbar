@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:IngeniuxCMService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:IngeniuxCMService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:IngeniuxCMService/Imports">
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd1" namespace="urn:IngeniuxCMService" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ingeniux.CMS" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SchemaDesignerServices_UploadThumbnail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_UploadThumbnail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_UploadSchemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadSchemas" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_UploadSchemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadSchemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaFieldCandidates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaFieldCandidates" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaFieldCandidates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaFieldCandidatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetFavoriteSchemaFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteSchemaFields" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetFavoriteSchemaFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteSchemaFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_AddFavoriteSchemaField_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFavoriteSchemaField" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_AddFavoriteSchemaField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFavoriteSchemaFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_RemoveFavoriteSchemaField_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFavoriteSchemaField" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_RemoveFavoriteSchemaField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFavoriteSchemaFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_ToggleFavoriteAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:ToggleFavoriteAvailability" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_ToggleFavoriteAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ToggleFavoriteAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEfforts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEfforts" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEfforts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEffortsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEffortsForComponentEmbeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEffortsForComponentEmbeds" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEffortsForComponentEmbeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEffortsForComponentEmbedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEffortsForComponentUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEffortsForComponentUnit" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaChangeEffortsForComponentUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaChangeEffortsForComponentUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemasSimple_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemasSimple" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemasSimple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemasSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemas" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_DeleteSchemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSchemas" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_DeleteSchemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSchemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaDetails" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SaveSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSchema" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SaveSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncPages" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncAssets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncAssets" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncAssets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutOfSyncComponentEmbeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutOfSyncComponentEmbeds" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutOfSyncComponentEmbeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutOfSyncComponentEmbedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncComponentContentUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncComponentContentUnits" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaOutofSyncComponentContentUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaOutofSyncComponentContentUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaPages" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaAssets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaAssets" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaAssets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaComponentEmbeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaComponentEmbeds" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaComponentEmbeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaComponentEmbedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaComponentContentUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaComponentContentUnits" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetSchemaComponentContentUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaComponentContentUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncPagesToSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPagesToSchema" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncPagesToSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPagesToSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncComponentEmbedsToSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncComponentEmbedsToSchema" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncComponentEmbedsToSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncComponentEmbedsToSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncComponentUnitsToSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncComponentUnitsToSchema" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SyncComponentUnitsToSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncComponentUnitsToSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetContentUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentUnits" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_GetContentUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SetBlockedUserGroupsToSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetBlockedUserGroupsToSchema" />
+  </wsdl:message>
+  <wsdl:message name="SchemaDesignerServices_SetBlockedUserGroupsToSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetBlockedUserGroupsToSchemaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchemaDesignerServices">
+    <wsdl:operation name="UploadThumbnail">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/UploadThumbnail" message="tns:SchemaDesignerServices_UploadThumbnail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/UploadThumbnailResponse" message="tns:SchemaDesignerServices_UploadThumbnail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadSchemas">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/UploadSchemas" message="tns:SchemaDesignerServices_UploadSchemas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/UploadSchemasResponse" message="tns:SchemaDesignerServices_UploadSchemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaFieldCandidates">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaFieldCandidates" message="tns:SchemaDesignerServices_GetSchemaFieldCandidates_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaFieldCandidatesResponse" message="tns:SchemaDesignerServices_GetSchemaFieldCandidates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteSchemaFields">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetFavoriteSchemaFields" message="tns:SchemaDesignerServices_GetFavoriteSchemaFields_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetFavoriteSchemaFieldsResponse" message="tns:SchemaDesignerServices_GetFavoriteSchemaFields_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFavoriteSchemaField">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/AddFavoriteSchemaField" message="tns:SchemaDesignerServices_AddFavoriteSchemaField_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/AddFavoriteSchemaFieldResponse" message="tns:SchemaDesignerServices_AddFavoriteSchemaField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFavoriteSchemaField">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/RemoveFavoriteSchemaField" message="tns:SchemaDesignerServices_RemoveFavoriteSchemaField_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/RemoveFavoriteSchemaFieldResponse" message="tns:SchemaDesignerServices_RemoveFavoriteSchemaField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ToggleFavoriteAvailability">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/ToggleFavoriteAvailability" message="tns:SchemaDesignerServices_ToggleFavoriteAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/ToggleFavoriteAvailabilityResponse" message="tns:SchemaDesignerServices_ToggleFavoriteAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaChangeEfforts">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEfforts" message="tns:SchemaDesignerServices_GetSchemaChangeEfforts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEffortsResponse" message="tns:SchemaDesignerServices_GetSchemaChangeEfforts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaChangeEffortsForComponentEmbeds">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEffortsForComponentEmbeds" message="tns:SchemaDesignerServices_GetSchemaChangeEffortsForComponentEmbeds_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEffortsForComponentEmbedsResponse" message="tns:SchemaDesignerServices_GetSchemaChangeEffortsForComponentEmbeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaChangeEffortsForComponentUnit">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEffortsForComponentUnit" message="tns:SchemaDesignerServices_GetSchemaChangeEffortsForComponentUnit_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaChangeEffortsForComponentUnitResponse" message="tns:SchemaDesignerServices_GetSchemaChangeEffortsForComponentUnit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemasSimple">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemasSimple" message="tns:SchemaDesignerServices_GetSchemasSimple_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemasSimpleResponse" message="tns:SchemaDesignerServices_GetSchemasSimple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemas">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemas" message="tns:SchemaDesignerServices_GetSchemas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemasResponse" message="tns:SchemaDesignerServices_GetSchemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSchemas">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/DeleteSchemas" message="tns:SchemaDesignerServices_DeleteSchemas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/DeleteSchemasResponse" message="tns:SchemaDesignerServices_DeleteSchemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaDetails">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaDetails" message="tns:SchemaDesignerServices_GetSchemaDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaDetailsResponse" message="tns:SchemaDesignerServices_GetSchemaDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSchema">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SaveSchema" message="tns:SchemaDesignerServices_SaveSchema_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SaveSchemaResponse" message="tns:SchemaDesignerServices_SaveSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaOutofSyncPages">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncPages" message="tns:SchemaDesignerServices_GetSchemaOutofSyncPages_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncPagesResponse" message="tns:SchemaDesignerServices_GetSchemaOutofSyncPages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaOutofSyncAssets">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncAssets" message="tns:SchemaDesignerServices_GetSchemaOutofSyncAssets_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncAssetsResponse" message="tns:SchemaDesignerServices_GetSchemaOutofSyncAssets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaOutOfSyncComponentEmbeds">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutOfSyncComponentEmbeds" message="tns:SchemaDesignerServices_GetSchemaOutOfSyncComponentEmbeds_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutOfSyncComponentEmbedsResponse" message="tns:SchemaDesignerServices_GetSchemaOutOfSyncComponentEmbeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaOutofSyncComponentContentUnits">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncComponentContentUnits" message="tns:SchemaDesignerServices_GetSchemaOutofSyncComponentContentUnits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaOutofSyncComponentContentUnitsResponse" message="tns:SchemaDesignerServices_GetSchemaOutofSyncComponentContentUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaPages">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaPages" message="tns:SchemaDesignerServices_GetSchemaPages_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaPagesResponse" message="tns:SchemaDesignerServices_GetSchemaPages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaAssets">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaAssets" message="tns:SchemaDesignerServices_GetSchemaAssets_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaAssetsResponse" message="tns:SchemaDesignerServices_GetSchemaAssets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaComponentEmbeds">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaComponentEmbeds" message="tns:SchemaDesignerServices_GetSchemaComponentEmbeds_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaComponentEmbedsResponse" message="tns:SchemaDesignerServices_GetSchemaComponentEmbeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaComponentContentUnits">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaComponentContentUnits" message="tns:SchemaDesignerServices_GetSchemaComponentContentUnits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetSchemaComponentContentUnitsResponse" message="tns:SchemaDesignerServices_GetSchemaComponentContentUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPagesToSchema">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncPagesToSchema" message="tns:SchemaDesignerServices_SyncPagesToSchema_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncPagesToSchemaResponse" message="tns:SchemaDesignerServices_SyncPagesToSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncComponentEmbedsToSchema">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncComponentEmbedsToSchema" message="tns:SchemaDesignerServices_SyncComponentEmbedsToSchema_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncComponentEmbedsToSchemaResponse" message="tns:SchemaDesignerServices_SyncComponentEmbedsToSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncComponentUnitsToSchema">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncComponentUnitsToSchema" message="tns:SchemaDesignerServices_SyncComponentUnitsToSchema_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SyncComponentUnitsToSchemaResponse" message="tns:SchemaDesignerServices_SyncComponentUnitsToSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUnits">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetContentUnits" message="tns:SchemaDesignerServices_GetContentUnits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/GetContentUnitsResponse" message="tns:SchemaDesignerServices_GetContentUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBlockedUserGroupsToSchema">
+      <wsdl:input wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SetBlockedUserGroupsToSchema" message="tns:SchemaDesignerServices_SetBlockedUserGroupsToSchema_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IngeniuxCMService/SchemaDesignerServices/SetBlockedUserGroupsToSchemaResponse" message="tns:SchemaDesignerServices_SetBlockedUserGroupsToSchema_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

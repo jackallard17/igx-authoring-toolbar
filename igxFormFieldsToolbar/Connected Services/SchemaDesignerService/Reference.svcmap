@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ae825f9-7e4e-443b-8166-8563e1eba057" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bdsandbox/SOAP/SchemaDesignerServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SchemaDesignerServices.xsd" MetadataType="Schema" ID="81f4924c-a363-4907-84a5-681885b471ab" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="SchemaDesignerServices1.xsd" MetadataType="Schema" ID="170af1b4-81ab-4d57-8321-309198271565" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd4" />
+    <MetadataFile FileName="SchemaDesignerServices2.xsd" MetadataType="Schema" ID="03fde241-3959-4444-b66f-5acf8fbb6c1e" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd5" />
+    <MetadataFile FileName="SchemaDesignerServices.disco" MetadataType="Disco" ID="1df7de6a-a0c0-46ae-8d18-71efbd94ea92" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?disco" />
+    <MetadataFile FileName="SchemaDesignerServices3.xsd" MetadataType="Schema" ID="2217f140-780c-4aa3-81e4-d8cd0cf230a4" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="SchemaDesignerServices.wsdl" MetadataType="Wsdl" ID="f24bc394-f538-49d5-8f5a-99ee44c0f8ba" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SchemaDesignerServices4.xsd" MetadataType="Schema" ID="ebab7b13-6dce-4973-adac-617f9b3f31b6" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd3" />
+    <MetadataFile FileName="SchemaDesignerServices1.wsdl" MetadataType="Wsdl" ID="5264bf08-037d-41b7-a4f0-6760642966ea" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?wsdl" />
+    <MetadataFile FileName="SchemaDesignerServices5.xsd" MetadataType="Schema" ID="e3baf687-8cb6-4070-b8a6-4beba439fa0e" SourceId="1" SourceUrl="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

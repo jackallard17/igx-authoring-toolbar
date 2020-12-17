@@ -36,11 +36,10 @@ namespace igxFormFieldsToolbar
             int userSelection = listBox1.SelectedIndex;
             if (userSelection != -1)
             {
+                Controllers.GenerateInputFields(schemas, userSelection);
+                this.Close();
+            } 
 
-            }
-
-            Controllers.GenerateInputFields(schemas, userSelection);
-            this.Close();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

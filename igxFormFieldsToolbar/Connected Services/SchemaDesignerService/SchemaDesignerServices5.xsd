@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:IngeniuxCMService" elementFormDefault="qualified" targetNamespace="urn:IngeniuxCMService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" />
+  <xs:import schemaLocation="http://bdsandbox/SOAP/SchemaDesignerServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="UploadThumbnail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="FileByteStream" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadThumbnailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="UploadThumbnailResult" nillable="true" type="q2:XHRServiceResponseGenericOfFileUploadResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadSchemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="FileByteStream" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadSchemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="UploadSchemasResult" nillable="true" type="q4:XHRServiceResponseGenericOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaFieldCandidates">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaFieldCandidatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaFieldCandidatesResult" nillable="true" type="q5:XHRServiceResponseGenericOfSchemaFieldsGroupedListingk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteSchemaFields">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteSchemaFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetFavoriteSchemaFieldsResult" nillable="true" type="q6:XHRServiceResponseGenericOfArrayOfSchemaFavoriteEntryk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFavoriteSchemaField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q7:SchemaFavoriteEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFavoriteSchemaFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="AddFavoriteSchemaFieldResult" nillable="true" type="q8:XHRServiceResponseGenericOfSchemaFavoriteEntryk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveFavoriteSchemaField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveFavoriteSchemaFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="RemoveFavoriteSchemaFieldResult" nillable="true" type="q9:XHRServiceResponseGenericOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToggleFavoriteAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q10:SchemaPublicSetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToggleFavoriteAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="ToggleFavoriteAvailabilityResult" nillable="true" type="q11:XHRServiceResponseGenericOfSchemaPublicSetRequestk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEfforts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q12:SchemaChangeEffortAnalysisRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEffortsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaChangeEffortsResult" nillable="true" type="q13:XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEffortsForComponentEmbeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q14:SchemaChangeEffortAnalysisRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEffortsForComponentEmbedsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaChangeEffortsForComponentEmbedsResult" nillable="true" type="q15:XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEffortsForComponentUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q16:SchemaChangeEffortAnalysisRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaChangeEffortsForComponentUnitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaChangeEffortsForComponentUnitResult" nillable="true" type="q17:XHRServiceResponseGenericOfSchemaChangeEffortAnalysisResponsek3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemasSimple">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemasSimpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemasSimpleResult" nillable="true" type="q18:XHRServiceResponseGenericOfSchemasSimpleListResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemasResult" nillable="true" type="q19:XHRServiceResponseGenericOfSchemasListResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSchemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q20:SchemasDeleteInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSchemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="DeleteSchemasResult" nillable="true" type="q21:XHRServiceResponseGenericOfArrayOfstringuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q22:SchemaDetailGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaDetailsResult" nillable="true" type="q23:XHRServiceResponseGenericOfSchemaDetailsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q24:SchemaDetailsInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="SaveSchemaResult" nillable="true" type="q25:XHRServiceResponseGenericOfSchemaDetailsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q26:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncPagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaOutofSyncPagesResult" nillable="true" type="q27:XHRServiceResponseGenericOfSchemaPagesk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncAssets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q28:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncAssetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaOutofSyncAssetsResult" nillable="true" type="q29:XHRServiceResponseGenericOfSchemaAssetsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutOfSyncComponentEmbeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q30:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutOfSyncComponentEmbedsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaOutOfSyncComponentEmbedsResult" nillable="true" type="q31:XHRServiceResponseGenericOfSchemaComponentEmbedsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncComponentContentUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q32:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaOutofSyncComponentContentUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaOutofSyncComponentContentUnitsResult" nillable="true" type="q33:XHRServiceResponseGenericOfSchemaComponentUnitsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q34:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaPagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaPagesResult" nillable="true" type="q35:XHRServiceResponseGenericOfSchemaPagesk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaAssets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q36:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaAssetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaAssetsResult" nillable="true" type="q37:XHRServiceResponseGenericOfSchemaAssetsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaComponentEmbeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q38:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaComponentEmbedsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaComponentEmbedsResult" nillable="true" type="q39:XHRServiceResponseGenericOfSchemaComponentEmbedsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaComponentContentUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q40:SchemaPagesGetInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaComponentContentUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetSchemaComponentContentUnitsResult" nillable="true" type="q41:XHRServiceResponseGenericOfSchemaComponentUnitsk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncPagesToSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q42:SchemaSyncRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncPagesToSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="SyncPagesToSchemaResult" nillable="true" type="q43:XHRServiceResponseGenericOfSchemaPagesSyncResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncComponentEmbedsToSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q44:SchemaSyncComponentEmbedRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncComponentEmbedsToSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="SyncComponentEmbedsToSchemaResult" nillable="true" type="q45:XHRServiceResponseGenericOfSchemaComponentEmbedSyncResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncComponentUnitsToSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q46:SchemaSyncComponentUnitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncComponentUnitsToSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="SyncComponentUnitsToSchemaResult" nillable="true" type="q47:XHRServiceResponseGenericOfSchemaComponentUnitSyncResultk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="data" nillable="true" type="q48:ContentUnitsFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="GetContentUnitsResult" nillable="true" type="q49:XHRServiceResponseGenericOfContentUnitsGridResponsek3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBlockedUserGroupsToSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="schemaId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isAssetSchema" type="xs:boolean" />
+        <xs:element xmlns:q50="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="blockedGroupIds" nillable="true" type="q50:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBlockedUserGroupsToSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IngeniuxCMService" minOccurs="0" name="SetBlockedUserGroupsToSchemaResult" nillable="true" type="q51:XHRServiceResponseGenericOfArrayOfUniqueObjectWithCountk3WotQuK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

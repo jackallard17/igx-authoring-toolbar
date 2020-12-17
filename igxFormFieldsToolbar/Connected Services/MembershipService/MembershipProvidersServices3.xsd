@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IngeniuxCMService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+  <xs:complexType name="XHRServiceResponseGenericOfMembershipProvidersListsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MembershipProvidersList" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q1:MembershipProvidersList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfMembershipProvidersListsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfMembershipProvidersListsrvEL3N0" />
+  <xs:simpleType name="XHRResponseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESS" />
+      <xs:enumeration value="SESSION_EXPIRED" />
+      <xs:enumeration value="PROCESSING_ERROR" />
+      <xs:enumeration value="CANCELLED" />
+      <xs:enumeration value="CONTENT_FREEZE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="XHRResponseType" nillable="true" type="tns:XHRResponseType" />
+  <xs:complexType name="XHRServiceResponseGenericOfMembershipIsAdDefaultOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MembershipIsAdDefaultOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q2:MembershipIsAdDefaultOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfMembershipIsAdDefaultOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfMembershipIsAdDefaultOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfADQueryDefaultsOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ADQueryDefaultsOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q3:ADQueryDefaultsOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfADQueryDefaultsOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfADQueryDefaultsOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfQueryADResultsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="QueryADResult" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q4:QueryADResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfQueryADResultsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfQueryADResultsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfChangePasswordOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ChangePasswordOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q5:ChangePasswordOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfChangePasswordOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfChangePasswordOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfCreateUserOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CreateUserOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q6:CreateUserOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfCreateUserOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfCreateUserOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfDeleteUsersOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DeleteUsersOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q7:DeleteUsersOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfDeleteUsersOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfDeleteUsersOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfResetPasswordOutputsrvEL3N0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResetPasswordOutput" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" name="message" nillable="true" type="q8:ResetPasswordOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfResetPasswordOutputsrvEL3N0" nillable="true" type="tns:XHRServiceResponseGenericOfResetPasswordOutputsrvEL3N0" />
+  <xs:complexType name="XHRServiceResponseGenericOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="XHRServiceResponseGenericOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentFreezeEndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFreezeStartTime" nillable="true" type="xs:string" />
+      <xs:element name="code" type="tns:XHRResponseType" />
+      <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      <xs:element name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XHRServiceResponseGenericOfstring" nillable="true" type="tns:XHRServiceResponseGenericOfstring" />
+</xs:schema>

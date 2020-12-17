@@ -8,11 +8,11 @@ namespace igxFormFieldsToolbar.Models
 {
     public class IGXSchema
     {
-        public bool isComponent { get; set; }
+        public bool IsComponent { get; set; }
 
-        public string friendlyName { get; set; }
+        public string FriendlyName { get; set; }
 
         public List<SchemaField> Fields = new List<SchemaField>();
-        public string jsonString { get; set; }
+        public string JsonString { get; set; }
     }
 }

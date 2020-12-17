@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IngeniuxCMService.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://bdsandbox/SOAP/MembershipProvidersServices.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="MembershipProvidersList">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="Providers" nillable="true" type="q1:ArrayOfKeyValuePairOfstringMembershipProviderChoiceO5HAFep4" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MembershipProvidersList" nillable="true" type="tns:MembershipProvidersList" />
+  <xs:complexType name="MembershipProviderChoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isSaml" type="xs:boolean" />
+      <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MembershipProviderChoice" nillable="true" type="tns:MembershipProviderChoice" />
+  <xs:complexType name="MembershipIsAdDefaultOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdDefault" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MembershipIsAdDefaultOutput" nillable="true" type="tns:MembershipIsAdDefaultOutput" />
+  <xs:complexType name="ADQueryDefaultsOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adSearchDefaults" nillable="true" type="tns:DomainSearchDefaults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ADQueryDefaultsOutput" nillable="true" type="tns:ADQueryDefaultsOutput" />
+  <xs:complexType name="DomainSearchDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupNameField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupUserField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Query" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserEmailField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserIDField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainSearchDefaults" nillable="true" type="tns:DomainSearchDefaults" />
+  <xs:complexType name="QueryADResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usersAndGroups" nillable="true" type="tns:DomainSearchResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryADResult" nillable="true" type="tns:QueryADResult" />
+  <xs:complexType name="DomainSearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Domain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfDomainGroup" />
+      <xs:element minOccurs="0" name="UsersCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainSearchResult" nillable="true" type="tns:DomainSearchResult" />
+  <xs:complexType name="ArrayOfDomainGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DomainGroup" nillable="true" type="tns:DomainGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDomainGroup" nillable="true" type="tns:ArrayOfDomainGroup" />
+  <xs:complexType name="DomainGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfDomainUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainGroup" nillable="true" type="tns:DomainGroup" />
+  <xs:complexType name="ArrayOfDomainUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DomainUser" nillable="true" type="tns:DomainUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDomainUser" nillable="true" type="tns:ArrayOfDomainUser" />
+  <xs:complexType name="DomainUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainUser" nillable="true" type="tns:DomainUser" />
+  <xs:complexType name="ChangePasswordOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MinNonAlphaNumericCharactersLength" type="xs:int" />
+      <xs:element minOccurs="0" name="MinPasswordLength" type="xs:int" />
+      <xs:element minOccurs="0" name="PasswordChanged" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChangePasswordOutput" nillable="true" type="tns:ChangePasswordOutput" />
+  <xs:complexType name="CreateUserOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailError2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailSent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinNonAlphaNumericCharactersLength" type="xs:int" />
+      <xs:element minOccurs="0" name="MinPasswordLength" type="xs:int" />
+      <xs:element minOccurs="0" name="NewUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Newpassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDetail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateUserOutput" nillable="true" type="tns:CreateUserOutput" />
+  <xs:complexType name="DeleteUsersOutput">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="removedUsers" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteUsersOutput" nillable="true" type="tns:DeleteUsersOutput" />
+  <xs:complexType name="ResetPasswordOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailSent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Newpassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResetSuccessful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResetPasswordOutput" nillable="true" type="tns:ResetPasswordOutput" />
+</xs:schema>
