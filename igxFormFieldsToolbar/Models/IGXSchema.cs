@@ -15,4 +15,12 @@ namespace igxFormFieldsToolbar
         public List<SchemaField> Fields = new List<SchemaField>();
         public string JsonString { get; set; }
     }
+
+    public class SchemaField
+    {
+        public string TypeName { get; set; }
+        public string Name { get; set; }
+        public string Label { get; set; }
+        public bool Required { get; set; }
+    }
 }

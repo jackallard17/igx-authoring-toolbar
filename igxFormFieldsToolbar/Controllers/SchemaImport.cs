@@ -35,7 +35,7 @@ namespace igxFormFieldsToolbar
 		}
 
 
-		public static List<string> getJSON(userAuthInput authInput)
+		public static List<string> getJSON(UserAuthInput authInput)
         {
 			var JsonString = new List<string>();
 			string cmsURL = "bdsandbox";
@@ -95,6 +95,4 @@ namespace igxFormFieldsToolbar
 			return pagesFriendlyNames;
 		}
 	}
-	
-
 }

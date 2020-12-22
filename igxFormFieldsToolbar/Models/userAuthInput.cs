@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace igxFormFieldsToolbar
 {
-    public class userAuthInput
+    public class UserAuthInput
     {
         public string username { get; set; }
         public string password { get; set; }

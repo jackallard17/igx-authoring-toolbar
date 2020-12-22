@@ -26,8 +26,6 @@ namespace igxFormFieldsToolbar
             InitializeComponent();
             schemas = SchemaImport.createSchemaObjects();
             items = SchemaImport.returnPageNames(schemas);
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
