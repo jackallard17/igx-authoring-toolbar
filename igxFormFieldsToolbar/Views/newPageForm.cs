@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using igxFormFieldsToolbar.Models;
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
@@ -25,8 +24,8 @@ namespace igxFormFieldsToolbar
         public newPageForm()
         {
             InitializeComponent();
-            schemas = Controllers.createSchemaObjects();
-            items = Controllers.returnPageNames(schemas);
+            schemas = SchemaImport.createSchemaObjects();
+            items = SchemaImport.returnPageNames(schemas);
 
 
         }
@@ -36,7 +35,7 @@ namespace igxFormFieldsToolbar
             int userSelection = listBox1.SelectedIndex;
             if (userSelection != -1)
             {
-                Controllers.GenerateInputFields(schemas, userSelection);
+                DocumentControls.GenerateInputFields(schemas, userSelection);
                 this.Close();
             } 
 

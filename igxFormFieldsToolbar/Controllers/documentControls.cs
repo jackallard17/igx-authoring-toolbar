@@ -1,7 +1,6 @@
 ﻿using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
-using igxFormFieldsToolbar.Models;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
@@ -9,7 +8,7 @@ using System.Diagnostics;
 
 namespace igxFormFieldsToolbar
 {
-    public partial class Controllers
+    public class DocumentControls
     {
         public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
         public static List<ContentControl> documentContentControls = new List<ContentControl>();

@@ -21,7 +21,7 @@ namespace igxFormFieldsToolbar
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            Controllers.exportFieldContents();
+            DocumentControls.exportFieldContents();
         }
     }
 }

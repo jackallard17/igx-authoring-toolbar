@@ -1,5 +1,4 @@
-﻿using igxFormFieldsToolbar.Models;
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -12,8 +11,7 @@ using System.ServiceModel.Channels;
 
 namespace igxFormFieldsToolbar
 {
-	
-	public partial class Controllers
+	public class SchemaImport
 	{
 		public static List<IGXSchema> createSchemaObjects()
 		{
@@ -82,7 +80,20 @@ namespace igxFormFieldsToolbar
 
 			return JsonString;
         }
+		public static List<String> returnPageNames(List<IGXSchema> schemaList)
+		{
+			List<string> pagesFriendlyNames = new List<string>();
 
+			foreach (var item in schemaList)
+			{
+				if (item.IsComponent == false)
+				{
+					pagesFriendlyNames.Add(item.FriendlyName);
+				}
+
+			}
+			return pagesFriendlyNames;
+		}
 	}
 	
 

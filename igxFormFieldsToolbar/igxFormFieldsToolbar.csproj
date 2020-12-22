@@ -321,8 +321,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\documentControls.cs" />
-    <Compile Include="Controllers\createSchemaObjects.cs" />
+    <Compile Include="Controllers\DocumentControls.cs" />
+    <Compile Include="Controllers\SchemaImport.cs" />
     <Compile Include="Models\userAuthInput.cs" />
     <Compile Include="Models\SchemaField.cs" />
     <Compile Include="Models\IGXSchema.cs" />
@@ -332,7 +332,6 @@
     <Compile Include="Views\newPageForm.Designer.cs">
       <DependentUpon>newPageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\returnPageNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
