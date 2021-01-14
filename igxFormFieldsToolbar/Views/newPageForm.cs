@@ -9,7 +9,7 @@ namespace igxFormFieldsToolbar
     {
 
         public List<SchemaDetails> schemas = new List<SchemaDetails>();
-        public List<String> items;
+        //public List<String> items;
 
         public newPageForm()
         {
@@ -23,7 +23,7 @@ namespace igxFormFieldsToolbar
 
             InitializeComponent();
             schemas = SchemaImport.getSchemaDetails(testInput);
-            items = SchemaImport.returnPageNames(schemas);
+            //items = SchemaImport.returnPageNames(schemas);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,8 +51,8 @@ namespace igxFormFieldsToolbar
         {
 
             listBox1.BeginUpdate();
-            foreach (String schema in items){
-                listBox1.Items.Add(schema);
+            foreach (SchemaDetails schema in schemas){
+                listBox1.Items.Add(schema.FriendlyName);
             }
             listBox1.EndUpdate();
 
@@ -63,9 +63,9 @@ namespace igxFormFieldsToolbar
             listBox1.Items.Clear();
 
             listBox1.BeginUpdate();
-            foreach (String schema in items)
+            foreach (SchemaDetails schema in schemas)
             {
-                if (schema.StartsWith(searchBox.Text, StringComparison.CurrentCultureIgnoreCase))
+                if (schema.FriendlyName.StartsWith(searchBox.Text, StringComparison.CurrentCultureIgnoreCase))
                 {
                     listBox1.Items.Add(schema);
                 }

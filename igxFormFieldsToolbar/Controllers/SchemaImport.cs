@@ -37,15 +37,15 @@ namespace igxFormFieldsToolbar
 				using(OperationContextScope scope =  new OperationContextScope(service.InnerChannel))
                 {
 					OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
-
 					List<SchemaDetails> schemasList = new List<SchemaDetails>();
 					SchemaDetailGetInput schemaID = new SchemaDetailGetInput();
 
 					schemaID.schemaId = $"schemas/546";
 					schemasList.Add(service.GetSchemaDetails(schemaID).message);
 
-					//for (int i = 0; i < 546; i++)
+					//for (int i = 0; i < 5; i++)
 					//{
+					//	OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
 					//	schemaID.schemaId = $"schemas/{i}";
 					//	schemasList.Add(service.GetSchemaDetails(schemaID).message);
 					//}
@@ -53,16 +53,5 @@ namespace igxFormFieldsToolbar
 				}
 			}
         }
-
-		public static List<String> returnPageNames(List<SchemaDetails> schemaList)
-		{
-			List<string> pagesFriendlyNames = new List<string>();
-
-			foreach (var item in schemaList)
-			{
-				pagesFriendlyNames.Add(item.FriendlyName);
-			}
-			return pagesFriendlyNames;
-		}
 	}
 }
