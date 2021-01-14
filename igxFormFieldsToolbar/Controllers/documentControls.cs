@@ -2,7 +2,6 @@
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using igxFormFieldsToolbar.SchemaDesignerService;
 
@@ -18,10 +17,11 @@ namespace igxFormFieldsToolbar
             if (selection != -1){
                 //parses list of fields from JSON and adds each one
                 SchemaDetails selectedSchema = schemas[selection];
+                var fields = selectedSchema.Fields;
 
-                //foreach (SchemaField field in fields)
+                foreach (SchemaFieldInfo field in fields)
                 {
-                    //addField(field.TypeName, field.Name, field.Label, field.Required);
+                    addField(field.TypeName, field.Name, field.Label, field.Required);
                 }
             } else
             {

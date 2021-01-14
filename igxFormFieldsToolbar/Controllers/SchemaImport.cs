@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.IO;
 using System.ServiceModel;
 using igxFormFieldsToolbar.MembershipService;
 using igxFormFieldsToolbar.SchemaDesignerService;
@@ -19,24 +15,6 @@ namespace igxFormFieldsToolbar
 			password = "jallard",
 			membershipProvier = "IngeniuxMembershipProvider"
 		};
-
-		public static List<IGXSchema> createSchemaObjects()
-		{
-			List<IGXSchema> schemaList = new List<IGXSchema>(){ };
-
-			List<SchemaDetails> schema = getSchemaDetails(testInput);
-
-			IGXSchema newSchema = new IGXSchema()
-			{
-				//ID = schema.UniqueID,
-				//Name = schema.FriendlyName
-			};
-
-			schemaList.Add(newSchema);
-
-		return schemaList;
-		}
-
 
 		public static List<SchemaDetails> getSchemaDetails(UserAuthInput authInput)
         {

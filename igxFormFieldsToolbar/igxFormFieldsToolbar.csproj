@@ -324,7 +324,6 @@
     <Compile Include="Controllers\DocumentControls.cs" />
     <Compile Include="Controllers\SchemaImport.cs" />
     <Compile Include="Models\UserAuthInput.cs" />
-    <Compile Include="Models\IGXSchema.cs" />
     <Compile Include="Views\newPageForm.cs">
       <SubType>Form</SubType>
     </Compile>
