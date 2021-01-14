@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
+using igxFormFieldsToolbar.SchemaDesignerService;
+
 
 using System.Diagnostics;
 
@@ -18,13 +20,21 @@ namespace igxFormFieldsToolbar
     public partial class newPageForm : Form
     {
 
-        public List<IGXSchema> schemas = new List<IGXSchema>();
+        public List<SchemaDetails> schemas = new List<SchemaDetails>();
         public List<String> items;
 
         public newPageForm()
         {
+            UserAuthInput testInput = new UserAuthInput()
+            {
+                username = "jallard",
+                password = "jallard",
+                membershipProvier = "IngeniuxMembershipProvider"
+            };
+
+
             InitializeComponent();
-            schemas = SchemaImport.createSchemaObjects();
+            schemas = SchemaImport.getSchemaDetails(testInput);
             items = SchemaImport.returnPageNames(schemas);
         }
 

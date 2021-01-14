@@ -13,29 +13,32 @@ namespace igxFormFieldsToolbar
 {
 	public class SchemaImport
 	{
+		public static UserAuthInput testInput = new UserAuthInput()
+		{
+			username = "jallard",
+			password = "jallard",
+			membershipProvier = "IngeniuxMembershipProvider"
+		};
+
 		public static List<IGXSchema> createSchemaObjects()
 		{
-			List<IGXSchema> schemas = new List<IGXSchema>(){ };
-			var files = System.IO.Directory.GetFiles(@"C:\Users\jallard.INGENIUX\source\repos\igxFormFieldsToolbar\igxFormFieldsToolbar\etc\JSON Files\");
-			foreach (string file in files)
+			List<IGXSchema> schemaList = new List<IGXSchema>(){ };
+
+			List<SchemaDetails> schema = getSchemaDetails(testInput);
+
+			IGXSchema newSchema = new IGXSchema()
 			{
-				string jsonFile = System.IO.File.ReadAllText(file);
-				JObject input = JObject.Parse(jsonFile);
+				//ID = schema.UniqueID,
+				//Name = schema.FriendlyName
+			};
 
-				IGXSchema newSchema = new IGXSchema()
-				{
-					IsComponent = (bool)input["_CurrentVersion"]["IsComponent"],
-					FriendlyName = (string)input["Name"],
-					JsonString = jsonFile
-				};
-				schemas.Add(newSchema);
-			}
+			schemaList.Add(newSchema);
 
-		return schemas;
+		return schemaList;
 		}
 
 
-		public static List<string> getJSON(UserAuthInput authInput)
+		public static List<SchemaDetails> getSchemaDetails(UserAuthInput authInput)
         {
 			var JsonString = new List<string>();
 			string cmsURL = "bdsandbox";
@@ -43,7 +46,6 @@ namespace igxFormFieldsToolbar
 			WSHttpBinding httpBinding = new WSHttpBinding(SecurityMode.None);
 			EndpointAddress endpoint = new EndpointAddress($"http://{cmsURL}/soap/MembershipProvidersServices.svc");
 
-			//generate authentication token to access CMS
 			string token = string.Empty;
 			using (MembershipProvidersServicesClient mservice = new MembershipProvidersServicesClient(httpBinding, endpoint))
             {
@@ -56,41 +58,31 @@ namespace igxFormFieldsToolbar
             {
 				using(OperationContextScope scope =  new OperationContextScope(service.InnerChannel))
                 {
-					//sets authentication token in header of request
 					OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
 
-					var pageSchemas = service.GetSchemasSimple().message.pageSchemas;
+					List<SchemaDetails> schemasList = new List<SchemaDetails>();
+					SchemaDetailGetInput schemaID = new SchemaDetailGetInput();
 
-					foreach (var pageSchema in pageSchemas)
-                    {
-						SchemaDesignerService.SchemaDetailGetInput schemaDetail = new SchemaDetailGetInput();
-						schemaDetail.schemaId = pageSchema.ID;
+					schemaID.schemaId = $"schemas/546";
+					schemasList.Add(service.GetSchemaDetails(schemaID).message);
 
-						var sd = service.GetSchemaDetails(schemaDetail);
-
-						System.Diagnostics.Debug.WriteLine(sd.message.ViewName);
-                    }
-					
-
-					//var response = service.GetSchemaDetails();
+					//for (int i = 0; i < 546; i++)
+					//{
+					//	schemaID.schemaId = $"schemas/{i}";
+					//	schemasList.Add(service.GetSchemaDetails(schemaID).message);
+					//}
+					return schemasList;
 				}
-
-
 			}
-
-			return JsonString;
         }
-		public static List<String> returnPageNames(List<IGXSchema> schemaList)
+
+		public static List<String> returnPageNames(List<SchemaDetails> schemaList)
 		{
 			List<string> pagesFriendlyNames = new List<string>();
 
 			foreach (var item in schemaList)
 			{
-				if (item.IsComponent == false)
-				{
-					pagesFriendlyNames.Add(item.FriendlyName);
-				}
-
+				pagesFriendlyNames.Add(item.FriendlyName);
 			}
 			return pagesFriendlyNames;
 		}

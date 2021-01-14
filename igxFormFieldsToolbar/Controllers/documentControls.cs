@@ -4,6 +4,7 @@ using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using igxFormFieldsToolbar.SchemaDesignerService;
 
 
 namespace igxFormFieldsToolbar
@@ -12,20 +13,15 @@ namespace igxFormFieldsToolbar
     {
         public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
         public static List<ContentControl> documentContentControls = new List<ContentControl>();
-        public static void GenerateInputFields(List<IGXSchema> schemas, int selection)
+        public static void GenerateInputFields(List<SchemaDetails> schemas, int selection)
         {
             if (selection != -1){
                 //parses list of fields from JSON and adds each one
-                IGXSchema selectedSchema = schemas[selection];
-                string selectedJSON = schemas[selection].JsonString;
-                var jObj = JObject.Parse(selectedJSON);
-                var fields = jObj["_CurrentVersion"]["_Fields"]
-                    .ToObject<List<SchemaField>>();
+                SchemaDetails selectedSchema = schemas[selection];
 
-                foreach (SchemaField field in fields)
+                //foreach (SchemaField field in fields)
                 {
-                    addField(field.TypeName, field.Name, field.Label, field.Required);
-                    
+                    //addField(field.TypeName, field.Name, field.Label, field.Required);
                 }
             } else
             {
