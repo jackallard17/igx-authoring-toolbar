@@ -3,6 +3,9 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Office = Microsoft.Office.Core;
+using igxFormFieldsToolbar.SchemaDesignerService;
+using System.Collections.Generic;
+
 
 // TODO:  Follow these steps to enable the Ribbon (XML) item:
 
@@ -34,9 +37,9 @@ namespace igxFormFieldsToolbar
         {
         }
 
-        #region IRibbonExtensibility Members
+    #region IRibbonExtensibility Members
 
-        public string GetCustomUI(string ribbonID)
+    public string GetCustomUI(string ribbonID)
         {
             return GetResourceText("igxFormFieldsToolbar.Ribbon.xml");
         }
@@ -46,10 +49,12 @@ namespace igxFormFieldsToolbar
         #region Ribbon Callbacks
         //Create callback methods here. For more information about adding callback methods, visit https://go.microsoft.com/fwlink/?LinkID=271226
 
+
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
             this.ribbon = ribbonUI;
         }
+
 
         #endregion
 

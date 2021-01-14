@@ -9,13 +9,6 @@ namespace igxFormFieldsToolbar
 {
 	public class SchemaImport
 	{
-		public static UserAuthInput testInput = new UserAuthInput()
-		{
-			username = "jallard",
-			password = "jallard",
-			membershipProvier = "IngeniuxMembershipProvider"
-		};
-
 		public static List<SchemaDetails> getSchemaDetails(UserAuthInput authInput)
         {
 			string cmsURL = "bdsandbox";
@@ -48,9 +41,7 @@ namespace igxFormFieldsToolbar
 						schemasList.Add(service.GetSchemaDetails(schemaID).message);
 					}
 				}
-
 			}
-
 			return schemasList;
 		}
 	}

@@ -7,23 +7,22 @@ namespace igxFormFieldsToolbar
 {
     public partial class newPageForm : Form
     {
+        List<SchemaDetails> schemas = SchemaImport.getSchemaDetails(testInput);
 
-        public List<SchemaDetails> schemas = new List<SchemaDetails>();
-        //public List<String> items;
+        static UserAuthInput testInput = new UserAuthInput()
+        {
+            username = "jallard",
+            password = "jallard",
+            membershipProvier = "IngeniuxMembershipProvider"
+        };
+
 
         public newPageForm()
         {
-            UserAuthInput testInput = new UserAuthInput()
-            {
-                username = "jallard",
-                password = "jallard",
-                membershipProvier = "IngeniuxMembershipProvider"
-            };
 
 
             InitializeComponent();
             schemas = SchemaImport.getSchemaDetails(testInput);
-            //items = SchemaImport.returnPageNames(schemas);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace igxFormFieldsToolbar
             } 
 
         }
-
+      
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
