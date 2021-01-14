@@ -31,7 +31,7 @@ namespace igxFormFieldsToolbar
             int userSelection = listBox1.SelectedIndex;
             if (userSelection != -1)
             {
-                DocumentControls.GenerateInputFields(schemas, userSelection);
+                DocumentControls.AddCMSPage(schemas, userSelection);
                 this.Close();
             } 
 

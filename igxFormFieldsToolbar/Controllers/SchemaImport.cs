@@ -18,40 +18,40 @@ namespace igxFormFieldsToolbar
 
 		public static List<SchemaDetails> getSchemaDetails(UserAuthInput authInput)
         {
-			var JsonString = new List<string>();
 			string cmsURL = "bdsandbox";
-;
 			WSHttpBinding httpBinding = new WSHttpBinding(SecurityMode.None);
 			EndpointAddress endpoint = new EndpointAddress($"http://{cmsURL}/soap/MembershipProvidersServices.svc");
+			httpBinding.MaxReceivedMessageSize = 2147483647;
 
 			string token = string.Empty;
 			using (MembershipProvidersServicesClient mservice = new MembershipProvidersServicesClient(httpBinding, endpoint))
-            {
+			{
 				token = mservice.Login(authInput.username, authInput.password, authInput.membershipProvier).message;
-            }
+			}
 
 			endpoint = new EndpointAddress($"http://{cmsURL}/soap/SchemaDesignerServices.svc");
 
-			using(SchemaDesignerServicesClient service = new SchemaDesignerServicesClient(httpBinding, endpoint))
+			List<SchemaDetails> schemasList = new List<SchemaDetails>();
+
+			List<int> schemasToRetreive = new List<int> { 48, 95, 546 };
+
+			foreach (int i in schemasToRetreive)
             {
-				using(OperationContextScope scope =  new OperationContextScope(service.InnerChannel))
-                {
-					OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
-					List<SchemaDetails> schemasList = new List<SchemaDetails>();
-					SchemaDetailGetInput schemaID = new SchemaDetailGetInput();
+				using (SchemaDesignerServicesClient service = new SchemaDesignerServicesClient(httpBinding, endpoint))
+				{
+					using (OperationContextScope scope = new OperationContextScope(service.InnerChannel))
+					{
+						OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
+						SchemaDetailGetInput schemaID = new SchemaDetailGetInput();
 
-					schemaID.schemaId = $"schemas/546";
-					schemasList.Add(service.GetSchemaDetails(schemaID).message);
-
-					//for (int i = 0; i < 5; i++)
-					//{
-					//	OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
-					//	schemaID.schemaId = $"schemas/{i}";
-					//	schemasList.Add(service.GetSchemaDetails(schemaID).message);
-					//}
-					return schemasList;
+						schemaID.schemaId = $"schemas/{i}";
+						schemasList.Add(service.GetSchemaDetails(schemaID).message);
+					}
 				}
+
 			}
-        }
+
+			return schemasList;
+		}
 	}
 }
