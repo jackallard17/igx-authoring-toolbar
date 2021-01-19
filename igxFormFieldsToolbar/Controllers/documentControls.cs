@@ -2,7 +2,7 @@
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
-using System.Diagnostics;
+using igxFormFieldsToolbar.Models;
 using igxFormFieldsToolbar.SchemaDesignerService;
 
 
@@ -12,29 +12,33 @@ namespace igxFormFieldsToolbar
     {
         public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
         public static List<ContentControl> documentContentControls = new List<ContentControl>();
-        public static void AddCMSPage(List<SchemaDetails> schemas, int selection)
+
+        public List<CMSPage> xmlParts = new List<CMSPage>();
+        public void addCMSPage(List<SchemaDetails> schemas, int selection)
         {
             //create a new custom XML part for the page
             var currentPageNode = schemas[selection].ViewName;
-            Office.CustomXMLPart xmlDoc = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{currentPageNode}></{currentPageNode}>");
-            Office.CustomXMLNode root = xmlDoc.SelectSingleNode($"/{currentPageNode}");
 
+            CMSPage newPage = new CMSPage();
+            newPage.xmlDoc = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{currentPageNode}></{currentPageNode}>");
+            newPage.root = newPage.xmlDoc.SelectSingleNode($"/{currentPageNode}");
+            
             if (selection != -1){
                 SchemaDetails selectedSchema = schemas[selection];
                 var fields = selectedSchema.Fields;
 
                 foreach (SchemaFieldInfo field in fields)
                 {
-                    addField(field);
+                    addField(field, newPage);
                 }
             } else
             {
                 //do nothing
             }
-
+            xmlParts.Add(newPage);
         }
 
-        public static void addField(SchemaFieldInfo field)
+        public void addField(SchemaFieldInfo field, CMSPage page)
         {
             //moves range each time field is added, generates text label over each field
             object i = 1;
@@ -65,6 +69,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.contentControls.Add(control);
             }
             else if (field.TypeName == "XHTML Element")
             {
@@ -72,6 +77,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.contentControls.Add(control);
             }
             else if (field.TypeName == "Checkbox")
             {
@@ -79,6 +85,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.contentControls.Add(control);
             }
             else if (field.TypeName == "Asset" || field.TypeName.Contains("Image") == true)
             {
@@ -86,41 +93,49 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.contentControls.Add(control);
             } else if (field.TypeName == "List")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlBuildingBlockGallery, range);
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.contentControls.Add(control);
             }
         }
       
-        public static void exportFieldContents()
+        public void exportFieldContents()
         {
-            ContentControls contentControls = document.ContentControls;
-
-            for (int i = 1; i < contentControls.Count + 1; i++)
+            foreach(CMSPage page in xmlParts)
             {
-                string name = contentControls[i].Tag;
+                List<ContentControl> contentControls = page.contentControls;
 
-                if (contentControls[i].Type == WdContentControlType.wdContentControlText || contentControls[i].Type == WdContentControlType.wdContentControlRichText)
+                System.Diagnostics.Debug.WriteLine("cms page iteration");
+                foreach (ContentControl control in contentControls)
                 {
-                    string inputText = contentControls[i].Range.Text;
+                    string name = control.Tag;
 
-                    if (contentControls[i].ShowingPlaceholderText == false)
+                    if (control.Type == WdContentControlType.wdContentControlText || control.Type == WdContentControlType.wdContentControlRichText)
                     {
-                        //xmlDoc.AddNode(root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, inputText);
+                        string inputText = control.Range.Text;
+
+                        if (control.ShowingPlaceholderText == false)
+                        {
+                            page.xmlDoc.AddNode(page.root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, inputText);
+                            System.Diagnostics.Debug.WriteLine("node added");
+                        }
                     }
-                } else if (contentControls[i].Type == WdContentControlType.wdContentControlCheckBox)
-                {
-                    string isChecked = contentControls[i].Checked.ToString();
-                    //xmlDoc.AddNode(root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, isChecked);
-                } 
+                    else if (control.Type == WdContentControlType.wdContentControlCheckBox)
+                    {
+                        string isChecked = control.Checked.ToString();
+                        page.xmlDoc.AddNode(page.root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, isChecked);
+                        
+                    }
+                }
             }
+
             System.Windows.Forms.MessageBox.Show("XML Export Complete");
         }
 
     }
-
-        
 }

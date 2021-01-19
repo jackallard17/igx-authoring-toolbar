@@ -3,8 +3,6 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Office = Microsoft.Office.Core;
-using igxFormFieldsToolbar.SchemaDesignerService;
-using System.Collections.Generic;
 
 
 // TODO:  Follow these steps to enable the Ribbon (XML) item:

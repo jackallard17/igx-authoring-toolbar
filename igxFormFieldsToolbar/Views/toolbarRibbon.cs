@@ -18,10 +18,5 @@ namespace igxFormFieldsToolbar
             newPageForm form = new newPageForm();
             form.ShowDialog();
         }
-
-        private void button1_Click(object sender, RibbonControlEventArgs e)
-        {
-            DocumentControls.exportFieldContents();
-        }
     }
 }

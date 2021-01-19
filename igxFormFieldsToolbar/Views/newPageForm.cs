@@ -8,6 +8,7 @@ namespace igxFormFieldsToolbar
     public partial class newPageForm : Form
     {
         List<SchemaDetails> schemas = SchemaImport.getSchemaDetails(testInput);
+        DocumentControls documentControls = new DocumentControls();
 
         static UserAuthInput testInput = new UserAuthInput()
         {
@@ -30,7 +31,7 @@ namespace igxFormFieldsToolbar
             int userSelection = listBox1.SelectedIndex;
             if (userSelection != -1)
             {
-                DocumentControls.AddCMSPage(schemas, userSelection);
+                documentControls.addCMSPage(schemas, userSelection);
                 this.Close();
             } 
 
