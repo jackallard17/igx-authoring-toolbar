@@ -30,6 +30,7 @@ namespace igxFormFieldsToolbar
                 foreach (SchemaFieldInfo field in fields)
                 {
                     addField(field, newPage);
+                    System.Diagnostics.Debug.WriteLine("new field added");
                 }
             } else
             {
@@ -57,10 +58,6 @@ namespace igxFormFieldsToolbar
             document.Paragraphs.Add();
             range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
 
-
-            //mapping CMS fields to word ContentControl fields
-            //using the typename string is def not the best way to do this....should probably create some kind of list/dictionary for all "_FieldTypeValue" in the JSON
-
             ContentControl control;
 
             if (field.TypeName == "Text Element")
@@ -69,6 +66,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
                 page.contentControls.Add(control);
             }
             else if (field.TypeName == "XHTML Element")
@@ -77,6 +75,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
                 page.contentControls.Add(control);
             }
             else if (field.TypeName == "Checkbox")
@@ -85,6 +84,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
                 page.contentControls.Add(control);
             }
             else if (field.TypeName == "Asset" || field.TypeName.Contains("Image") == true)
@@ -93,6 +93,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
                 page.contentControls.Add(control);
             } else if (field.TypeName == "List")
             {
@@ -100,6 +101,7 @@ namespace igxFormFieldsToolbar
                 documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
+                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
                 page.contentControls.Add(control);
             }
         }
@@ -108,10 +110,8 @@ namespace igxFormFieldsToolbar
         {
             foreach(CMSPage page in xmlParts)
             {
-                List<ContentControl> contentControls = page.contentControls;
-
                 System.Diagnostics.Debug.WriteLine("cms page iteration");
-                foreach (ContentControl control in contentControls)
+                foreach (ContentControl control in page.contentControls)
                 {
                     string name = control.Tag;
 
