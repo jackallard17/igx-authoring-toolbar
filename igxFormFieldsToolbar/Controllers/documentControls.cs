@@ -4,24 +4,20 @@ using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
 using igxFormFieldsToolbar.Models;
 using igxFormFieldsToolbar.SchemaDesignerService;
-
+using System.Diagnostics;
 
 namespace igxFormFieldsToolbar
 {
     public class DocumentControls
     {
         public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
-        public static List<ContentControl> documentContentControls = new List<ContentControl>();
 
-        public List<CMSPage> xmlParts = new List<CMSPage>();
+        public static List<CMSPage> pages = new List<CMSPage>();
         public void addCMSPage(List<SchemaDetails> schemas, int selection)
         {
-            //create a new custom XML part for the page
-            var currentPageNode = schemas[selection].ViewName;
-
+            //Creates a new XML part corresponding to a CMS page, sets the root node
             CMSPage newPage = new CMSPage();
-            newPage.xmlDoc = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{currentPageNode}></{currentPageNode}>");
-            newPage.root = newPage.xmlDoc.SelectSingleNode($"/{currentPageNode}");
+            newPage.ViewName = schemas[selection].ViewName;
             
             if (selection != -1){
                 SchemaDetails selectedSchema = schemas[selection];
@@ -30,13 +26,12 @@ namespace igxFormFieldsToolbar
                 foreach (SchemaFieldInfo field in fields)
                 {
                     addField(field, newPage);
-                    System.Diagnostics.Debug.WriteLine("new field added");
                 }
             } else
             {
                 //do nothing
             }
-            xmlParts.Add(newPage);
+            pages.Add(newPage);
         }
 
         public void addField(SchemaFieldInfo field, CMSPage page)
@@ -63,79 +58,58 @@ namespace igxFormFieldsToolbar
             if (field.TypeName == "Text Element")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlText, range);
-                documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
-                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
-                page.contentControls.Add(control);
+                page.ContentControls.Add(control);
             }
             else if (field.TypeName == "XHTML Element")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlRichText, range);
-                documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
-                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
-                page.contentControls.Add(control);
+                page.ContentControls.Add(control);
             }
             else if (field.TypeName == "Checkbox")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlCheckBox, range);
-                documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
-                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
-                page.contentControls.Add(control);
+                page.ContentControls.Add(control);
             }
             else if (field.TypeName == "Asset" || field.TypeName.Contains("Image") == true)
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlPicture, range);
-                documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
-                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
-                page.contentControls.Add(control);
+                page.ContentControls.Add(control);
             } else if (field.TypeName == "List")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlBuildingBlockGallery, range);
-                documentContentControls.Add(control);
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
-                page.root.AppendChildNode(control.Tag, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, null);
-                page.contentControls.Add(control);
+                page.ContentControls.Add(control);
             }
         }
       
         public void exportFieldContents()
         {
-            foreach(CMSPage page in xmlParts)
+            foreach(CMSPage page in pages)
             {
-                System.Diagnostics.Debug.WriteLine("cms page iteration");
-                foreach (ContentControl control in page.contentControls)
-                {
-                    string name = control.Tag;
+                var newXMLPart = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{page.ViewName}></{page.ViewName}>");
+                var root = newXMLPart.SelectSingleNode($"/{page.ViewName}");
 
+                foreach (ContentControl control in page.ContentControls)
+                {
                     if (control.Type == WdContentControlType.wdContentControlText || control.Type == WdContentControlType.wdContentControlRichText)
                     {
-                        string inputText = control.Range.Text;
-
-                        if (control.ShowingPlaceholderText == false)
-                        {
-                            page.xmlDoc.AddNode(page.root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, inputText);
-                            System.Diagnostics.Debug.WriteLine("node added");
-                        }
+                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Range.Text}");
                     }
                     else if (control.Type == WdContentControlType.wdContentControlCheckBox)
                     {
-                        string isChecked = control.Checked.ToString();
-                        page.xmlDoc.AddNode(page.root, name, null, null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, isChecked);
-                        
+                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Checked.ToString()}");
                     }
                 }
             }
-
-            System.Windows.Forms.MessageBox.Show("XML Export Complete");
         }
-
     }
 }
