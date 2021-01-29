@@ -8,7 +8,7 @@ namespace igxFormFieldsToolbar
     public partial class newPageForm : Form
     {
         List<SchemaDetails> schemas = SchemaImport.getSchemaDetails(testInput);
-        DocumentControls documentControls = new DocumentControls();
+        DocumentController documentControls = new DocumentController();
 
         static UserAuthInput testInput = new UserAuthInput()
         {

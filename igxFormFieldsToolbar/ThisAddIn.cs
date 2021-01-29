@@ -43,7 +43,7 @@ namespace igxFormFieldsToolbar
                     Doc.Save();
                 }
             }
-            DocumentControls documentControls = new DocumentControls();
+            DocumentController documentControls = new DocumentController();
             documentControls.exportFieldContents();
         }
 

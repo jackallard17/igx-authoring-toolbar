@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace igxFormFieldsToolbar
 {
-    public class DocumentControls
+    public class DocumentController
     {
         public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
 

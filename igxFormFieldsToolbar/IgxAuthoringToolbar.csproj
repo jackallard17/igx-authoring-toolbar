@@ -321,7 +321,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\DocumentControls.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\SchemaImport.cs" />
     <Compile Include="Models\CMSPage.cs" />
     <Compile Include="Models\UserAuthInput.cs" />
