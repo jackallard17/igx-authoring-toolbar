@@ -13,8 +13,6 @@ namespace igxFormFieldsToolbar
 {
     public partial class ThisAddIn
     {
-        private bool allowSave = false;
-
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             this.Application.DocumentBeforeSave += Application_DocumentBeforeSave;

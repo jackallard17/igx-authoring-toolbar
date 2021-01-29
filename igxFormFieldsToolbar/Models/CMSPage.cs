@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
-using Newtonsoft.Json.Linq;
 
 
 namespace igxFormFieldsToolbar.Models

@@ -4,7 +4,6 @@ using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
 using igxFormFieldsToolbar.Models;
 using igxFormFieldsToolbar.SchemaDesignerService;
-using System.Diagnostics;
 
 namespace igxFormFieldsToolbar
 {
