@@ -26,23 +26,6 @@ namespace igxFormFieldsToolbar
 
         private void Application_DocumentBeforeSave(Microsoft.Office.Interop.Word.Document Doc, ref bool SaveAsUI, ref bool Cancel)
         {
-            if (!allowSave)
-            {
-                allowSave = true;
-
-                if (SaveAsUI)
-                {
-                    // Display Save As dialog
-                    Microsoft.Office.Interop.Word.Dialog d = Globals.ThisAddIn.Application.Dialogs[Microsoft.Office.Interop.Word.WdWordDialog.wdDialogFileSaveAs];
-                    object timeOut = 0;
-                    d.Show(ref timeOut);
-                }
-                else
-                {
-                    // Save without dialog
-                    Doc.Save();
-                }
-            }
             DocumentController documentControls = new DocumentController();
             documentControls.exportFieldContents();
         }
