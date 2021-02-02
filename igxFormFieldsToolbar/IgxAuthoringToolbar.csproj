@@ -486,14 +486,6 @@
     <None Include="Connected Services\SchemaDesignerService\SchemaDesignerServices5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="etc\JSON Files\16 - Copy.json" />
-    <None Include="etc\JSON Files\99.json" />
-    <None Include="etc\JSON Files\98.json" />
-    <None Include="etc\JSON Files\58.json" />
-    <None Include="etc\JSON Files\8.json" />
-    <None Include="etc\JSON Files\16.json" />
-    <None Include="etc\JSON Files\63.json" />
-    <None Include="etc\JSON Files\545.json" />
     <None Include="igxFormFieldsToolbar_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Raven.Client.Documents.DocumentStore.datasource" />
@@ -531,16 +523,11 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="etc\CMS Page Schemas\Page_Audience_Page.xml" />
-    <Content Include="etc\CMS Page Schemas\Page_Docx_Forms_Test_Page.xml" />
-    <Content Include="etc\XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="xml\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MembershipService\" />
     <WCFMetadataStorage Include="Connected Services\SchemaDesignerService\" />
