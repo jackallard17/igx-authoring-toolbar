@@ -101,7 +101,14 @@ namespace igxFormFieldsToolbar
                 {
                     if (control.Type == WdContentControlType.wdContentControlText || control.Type == WdContentControlType.wdContentControlRichText)
                     {
-                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Range.Text}");
+                        if (!control.ShowingPlaceholderText)
+                        {
+                            newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Range.Text}");
+                        }
+                        else
+                        {
+                            newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, "");
+                        }
                     }
                     else if (control.Type == WdContentControlType.wdContentControlCheckBox)
                     {
