@@ -17,8 +17,9 @@ namespace igxFormFieldsToolbar
             //Creates a new XML part corresponding to a CMS page, sets the root node
             CMSPage newPage = new CMSPage();
             newPage.ViewName = schemas[selection].ViewName;
-            
-            if (selection != -1){
+
+            if (selection != -1)
+            {
                 SchemaDetails selectedSchema = schemas[selection];
                 var fields = selectedSchema.Fields;
 
@@ -26,7 +27,8 @@ namespace igxFormFieldsToolbar
                 {
                     addField(field, newPage);
                 }
-            } else
+            }
+            else
             {
                 //do nothing
             }
@@ -81,7 +83,8 @@ namespace igxFormFieldsToolbar
                 control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
-            } else if (field.TypeName == "List")
+            }
+            else if (field.TypeName == "List")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlBuildingBlockGallery, range);
                 control.LockContentControl = true;
@@ -89,33 +92,45 @@ namespace igxFormFieldsToolbar
                 page.ContentControls.Add(control);
             }
         }
-      
-        public void exportFieldContents()
-        {
-            foreach(CMSPage page in pages)
-            {
-                var newXMLPart = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{page.ViewName}></{page.ViewName}>");
-                var root = newXMLPart.SelectSingleNode($"/{page.ViewName}");
 
-                foreach (ContentControl control in page.ContentControls)
+        public void exportUserContent()
+        {
+            foreach (CMSPage page in pages)
+            {
+                createXMLPart(page);
+            }
+        }
+        private void createXMLPart(CMSPage page)
+        {
+            var newXMLPart = document.CustomXMLParts.Add($"<?xml version=\"1.0\" ?><{page.ViewName}></{page.ViewName}>");
+            var root = newXMLPart.SelectSingleNode($"/{page.ViewName}");
+
+            foreach (ContentControl control in page.ContentControls)
+            {
+                if (control.Type == WdContentControlType.wdContentControlText || control.Type == WdContentControlType.wdContentControlRichText)
                 {
-                    if (control.Type == WdContentControlType.wdContentControlText || control.Type == WdContentControlType.wdContentControlRichText)
+                    if (!control.ShowingPlaceholderText)
                     {
-                        if (!control.ShowingPlaceholderText)
-                        {
-                            newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Range.Text}");
-                        }
-                        else
-                        {
-                            newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, "");
-                        }
+                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Range.Text}");
                     }
-                    else if (control.Type == WdContentControlType.wdContentControlCheckBox)
+                    else
                     {
-                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Checked.ToString()}");
+                        newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, "");
                     }
                 }
+                else if (control.Type == WdContentControlType.wdContentControlCheckBox)
+                {
+                    newXMLPart.AddNode(root, $"{control.Tag}", "", null, Office.MsoCustomXMLNodeType.msoCustomXMLNodeElement, $"{control.Checked.ToString()}");
+                }
             }
+            System.Diagnostics.Debug.WriteLine(document.CustomXMLParts.Count);
+
+        }
+
+        private void updateXMLPart()
+        {
+            //newXMLPart.SelectSingleNode($"{control.Tag}").Text = control.Range.Text;
+
         }
     }
 }

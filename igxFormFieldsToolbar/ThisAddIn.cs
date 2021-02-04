@@ -25,7 +25,7 @@ namespace igxFormFieldsToolbar
         private void Application_DocumentBeforeSave(Microsoft.Office.Interop.Word.Document Doc, ref bool SaveAsUI, ref bool Cancel)
         {
             DocumentController documentControls = new DocumentController();
-            documentControls.exportFieldContents();
+            documentControls.exportUserContent();
         }
 
         #region VSTO generated code
