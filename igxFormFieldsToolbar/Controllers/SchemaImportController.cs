@@ -6,7 +6,7 @@ using System.ServiceModel.Channels;
 
 namespace igxFormFieldsToolbar
 {
-	public class SchemaImport
+	public class SchemaImportController
 	{
 		public static List<SchemaDetails> getSchemaDetails(UserAuthInput authInput)
         {

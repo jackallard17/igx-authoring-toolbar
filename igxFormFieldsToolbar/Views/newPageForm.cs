@@ -7,7 +7,7 @@ namespace igxFormFieldsToolbar
 {
     public partial class newPageForm : Form
     {
-        List<SchemaDetails> schemas = SchemaImport.getSchemaDetails(testInput);
+        List<SchemaDetails> schemas = SchemaImportController.getSchemaDetails(testInput);
         DocumentController documentControls = new DocumentController();
 
         static UserAuthInput testInput = new UserAuthInput()
@@ -23,7 +23,7 @@ namespace igxFormFieldsToolbar
 
 
             InitializeComponent();
-            schemas = SchemaImport.getSchemaDetails(testInput);
+            schemas = SchemaImportController.getSchemaDetails(testInput);
         }
 
         private void button1_Click(object sender, EventArgs e)
