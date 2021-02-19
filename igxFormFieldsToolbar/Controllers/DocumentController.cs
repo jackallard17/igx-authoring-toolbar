@@ -4,14 +4,19 @@ using Microsoft.Office.Interop.Word;
 using System.Collections.Generic;
 using igxFormFieldsToolbar.Models;
 using igxFormFieldsToolbar.SchemaDesignerService;
+using System.Diagnostics;
+using igxFormFieldsToolbar.Controllers;
+using Newtonsoft.Json;
 
 namespace igxFormFieldsToolbar
 {
     public class DocumentController
     {
-        public static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
+        private static Microsoft.Office.Tools.Word.Document document = Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);
 
-        public static List<CMSPage> pages = new List<CMSPage>();
+        private static List<CMSPage> pages = new List<CMSPage>();
+
+        private static RuntimeController runtime = new RuntimeController(document, pages);
         public void addCMSPage(List<SchemaDetails> schemas, int selection)
         {
             //Creates a new XML part corresponding to a CMS page, sets the root node
@@ -93,8 +98,17 @@ namespace igxFormFieldsToolbar
             }
         }
 
+        //clears existing XML parts and updates with new user input
         public void exportUserContent()
         {
+            runtime.serializeSessionData();
+            int i = document.CustomXMLParts.Count;
+            while (i > 3)
+            {
+                document.CustomXMLParts[i].Delete();
+                i--;
+            }
+            Debug.WriteLine(pages.Count);
             foreach (CMSPage page in pages)
             {
                 createXMLPart(page);
@@ -124,12 +138,6 @@ namespace igxFormFieldsToolbar
                 }
             }
             System.Diagnostics.Debug.WriteLine(document.CustomXMLParts.Count);
-
-        }
-
-        private void updateXMLPart()
-        {
-            //newXMLPart.SelectSingleNode($"{control.Tag}").Text = control.Range.Text;
 
         }
     }
