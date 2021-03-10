@@ -48,54 +48,45 @@ namespace igxFormFieldsToolbar
             document.Paragraphs.First.Range.Select();
             var range = document.Range();
 
-            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
-            document.Paragraphs.Add();
-            range.set_Style(Word.WdBuiltinStyle.wdStyleStrong);
-            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
-
-            range.Text = field.Label;
-
-            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
-            document.Paragraphs.Add();
-            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
-
             ContentControl control;
 
+            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
+            range.Text = field.Label;
+            document.Paragraphs.Add();
+            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
             if (field.TypeName == "Text Element")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlText, range);
-                control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
             }
             else if (field.TypeName == "XHTML Element")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlRichText, range);
-                control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
             }
             else if (field.TypeName == "Checkbox")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlCheckBox, range);
-                control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
             }
             else if (field.TypeName == "Asset" || field.TypeName.Contains("Image") == true)
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlPicture, range);
-                control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
             }
             else if (field.TypeName == "List")
             {
                 control = document.ContentControls.Add(WdContentControlType.wdContentControlBuildingBlockGallery, range);
-                control.LockContentControl = true;
                 control.Tag = $"{field.Name}";
                 page.ContentControls.Add(control);
             }
+            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
+            document.Paragraphs.Add();
+            range.Move(Unit: Word.WdUnits.wdParagraph, Count: ref i);
         }
 
         //clears existing XML parts and updates with new user input
