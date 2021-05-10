@@ -6,7 +6,6 @@ using igxFormFieldsToolbar.Models;
 using igxFormFieldsToolbar.SchemaDesignerService;
 using System.Diagnostics;
 using igxFormFieldsToolbar.Controllers;
-using Newtonsoft.Json;
 
 namespace igxFormFieldsToolbar
 {
