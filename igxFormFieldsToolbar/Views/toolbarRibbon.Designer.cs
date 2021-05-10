@@ -76,6 +76,7 @@ namespace igxFormFieldsToolbar
             this.existingPage.Name = "existingPage";
             this.existingPage.OfficeImageId = "FileExcelServicesOptions";
             this.existingPage.ShowImage = true;
+            this.existingPage.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.existingPage_Click);
             // 
             // group2
             // 

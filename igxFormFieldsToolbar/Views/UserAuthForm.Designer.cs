@@ -42,11 +42,11 @@ namespace igxFormFieldsToolbar.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 9);
+            this.label1.Location = new System.Drawing.Point(94, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 25);
+            this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User Authentication";
+            this.label1.Text = "CMS Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -114,6 +114,7 @@ namespace igxFormFieldsToolbar.Views
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "UserAuthForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserAuthForm";
             this.Load += new System.EventHandler(this.UserAuthForm_Load);
             this.ResumeLayout(false);

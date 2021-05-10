@@ -326,6 +326,12 @@
     <Compile Include="Controllers\SchemaImportController.cs" />
     <Compile Include="Models\CMSPage.cs" />
     <Compile Include="Models\UserAuthInput.cs" />
+    <Compile Include="Views\ExistingPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExistingPageForm.Designer.cs">
+      <DependentUpon>ExistingPageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\newPageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     <Compile Include="Views\UserAuthForm.Designer.cs">
       <DependentUpon>UserAuthForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ExistingPageForm.resx">
+      <DependentUpon>ExistingPageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\newPageForm.resx">
       <DependentUpon>newPageForm.cs</DependentUpon>
     </EmbeddedResource>

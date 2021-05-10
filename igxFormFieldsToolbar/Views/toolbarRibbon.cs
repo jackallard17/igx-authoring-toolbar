@@ -25,5 +25,11 @@ namespace igxFormFieldsToolbar
             UserAuthForm form = new UserAuthForm();
             form.ShowDialog();
         }
+
+        private void existingPage_Click(object sender, RibbonControlEventArgs e)
+        {
+            ExistingPageForm form = new ExistingPageForm();
+            form.ShowDialog();
+        }
     }
 }
