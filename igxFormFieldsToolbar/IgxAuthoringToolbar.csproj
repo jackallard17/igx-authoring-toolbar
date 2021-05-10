@@ -344,6 +344,12 @@
     <Compile Include="Views\toolbarRibbon.Designer.cs">
       <DependentUpon>toolbarRibbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserAuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserAuthForm.Designer.cs">
+      <DependentUpon>UserAuthForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\newPageForm.resx">
       <DependentUpon>newPageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +364,9 @@
     </Compile>
     <EmbeddedResource Include="Views\toolbarRibbon.resx">
       <DependentUpon>toolbarRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserAuthForm.resx">
+      <DependentUpon>UserAuthForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Connected Services\MembershipService\igxFormFieldsToolbar.MembershipService.XHRServiceResponseGenericOfADQueryDefaultsOutputsrvEL3N0.datasource">

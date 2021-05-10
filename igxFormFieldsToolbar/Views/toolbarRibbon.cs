@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using igxFormFieldsToolbar.Views;
 
 namespace igxFormFieldsToolbar
 {
@@ -16,6 +17,12 @@ namespace igxFormFieldsToolbar
         private void newPage_Click_1(object sender, RibbonControlEventArgs e)
         {
             newPageForm form = new newPageForm();
+            form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, RibbonControlEventArgs e)
+        {
+            UserAuthForm form = new UserAuthForm();
             form.ShowDialog();
         }
     }

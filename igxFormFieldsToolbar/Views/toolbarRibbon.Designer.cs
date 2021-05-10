@@ -40,7 +40,7 @@ namespace igxFormFieldsToolbar
             this.newPage = this.Factory.CreateRibbonButton();
             this.existingPage = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
-            this.button2 = this.Factory.CreateRibbonButton();
+            this.accountButton = this.Factory.CreateRibbonButton();
             this.igxAuthoringToolbar.SuspendLayout();
             this.authoringControls.SuspendLayout();
             this.group2.SuspendLayout();
@@ -79,17 +79,18 @@ namespace igxFormFieldsToolbar
             // 
             // group2
             // 
-            this.group2.Items.Add(this.button2);
+            this.group2.Items.Add(this.accountButton);
             this.group2.Label = "IGX Account";
             this.group2.Name = "group2";
             // 
-            // button2
+            // accountButton
             // 
-            this.button2.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.button2.Label = "My Account";
-            this.button2.Name = "button2";
-            this.button2.OfficeImageId = "AccountMenu";
-            this.button2.ShowImage = true;
+            this.accountButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.accountButton.Label = "My Account";
+            this.accountButton.Name = "accountButton";
+            this.accountButton.OfficeImageId = "AccountMenu";
+            this.accountButton.ShowImage = true;
+            this.accountButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
             // 
             // igxToolbar
             // 
@@ -115,7 +116,7 @@ namespace igxFormFieldsToolbar
         internal Microsoft.Office.Tools.Ribbon.RibbonButton newPage;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton existingPage;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton accountButton;
     }
 
     partial class ThisRibbonCollection
