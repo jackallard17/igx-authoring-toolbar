@@ -31,7 +31,7 @@ namespace igxFormFieldsToolbar.Views
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usrPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,12 +58,14 @@ namespace igxFormFieldsToolbar.Views
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // usrPasswordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(77, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 2;
+            this.usrPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.usrPasswordTextBox.Location = new System.Drawing.Point(77, 132);
+            this.usrPasswordTextBox.Name = "usrPasswordTextBox";
+            this.usrPasswordTextBox.Size = new System.Drawing.Size(156, 20);
+            this.usrPasswordTextBox.TabIndex = 2;
+            this.usrPasswordTextBox.TextChanged += new System.EventHandler(this.usrPasswordTextBox_TextChanged);
             // 
             // label2
             // 
@@ -100,6 +102,7 @@ namespace igxFormFieldsToolbar.Views
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(156, 21);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // UserAuthForm
             // 
@@ -110,7 +113,7 @@ namespace igxFormFieldsToolbar.Views
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.usrPasswordTextBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "UserAuthForm";
@@ -126,7 +129,7 @@ namespace igxFormFieldsToolbar.Views
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usrPasswordTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

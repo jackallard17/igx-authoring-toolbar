@@ -31,5 +31,16 @@ namespace igxFormFieldsToolbar.Views
         {
 
         }
+
+        private void usrPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            usrPasswordTextBox.PasswordChar = '*';
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
