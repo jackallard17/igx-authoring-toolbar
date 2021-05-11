@@ -29,54 +29,54 @@ namespace igxFormFieldsToolbar.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.xIDLabel = new System.Windows.Forms.Label();
+            this.xIDTextBox = new System.Windows.Forms.TextBox();
+            this.importPageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // xIDLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter xID";
+            this.xIDLabel.AutoSize = true;
+            this.xIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xIDLabel.Location = new System.Drawing.Point(99, 29);
+            this.xIDLabel.Name = "xIDLabel";
+            this.xIDLabel.Size = new System.Drawing.Size(76, 20);
+            this.xIDLabel.TabIndex = 0;
+            this.xIDLabel.Text = "Enter xID";
             // 
-            // textBox1
+            // xIDTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(78, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 1;
+            this.xIDTextBox.Location = new System.Drawing.Point(78, 52);
+            this.xIDTextBox.Name = "xIDTextBox";
+            this.xIDTextBox.Size = new System.Drawing.Size(122, 20);
+            this.xIDTextBox.TabIndex = 1;
             // 
-            // button1
+            // importPageButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.importPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(91, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Import Page";
-            this.button1.UseVisualStyleBackColor = true;
+            this.importPageButton.Location = new System.Drawing.Point(91, 86);
+            this.importPageButton.Name = "importPageButton";
+            this.importPageButton.Size = new System.Drawing.Size(97, 52);
+            this.importPageButton.TabIndex = 2;
+            this.importPageButton.Text = "Import Page";
+            this.importPageButton.UseVisualStyleBackColor = true;
             // 
             // ExistingPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 150);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.importPageButton);
+            this.Controls.Add(this.xIDTextBox);
+            this.Controls.Add(this.xIDLabel);
             this.Name = "ExistingPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExistingPageForm";
@@ -87,8 +87,8 @@ namespace igxFormFieldsToolbar.Views
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label xIDLabel;
+        private System.Windows.Forms.TextBox xIDTextBox;
+        private System.Windows.Forms.Button importPageButton;
     }
 }

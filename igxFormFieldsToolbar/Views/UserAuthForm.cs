@@ -34,7 +34,7 @@ namespace igxFormFieldsToolbar.Views
 
         private void usrPasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            usrPasswordTextBox.PasswordChar = '*';
+            passwordTextBox.PasswordChar = '*';
 
         }
 

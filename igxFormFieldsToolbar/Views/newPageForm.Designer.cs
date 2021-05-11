@@ -30,37 +30,37 @@ namespace igxFormFieldsToolbar
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.newPageButton = new System.Windows.Forms.Button();
+            this.schemasListBox = new System.Windows.Forms.ListBox();
             this.documentStoreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.documentStoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.schemaFilterSearchBox = new System.Windows.Forms.TextBox();
+            this.filterLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.documentStoreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentStoreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // newPageButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(106, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create New Page";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.newPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.newPageButton.Location = new System.Drawing.Point(106, 366);
+            this.newPageButton.Name = "newPageButton";
+            this.newPageButton.Size = new System.Drawing.Size(104, 32);
+            this.newPageButton.TabIndex = 0;
+            this.newPageButton.Text = "Create New Page";
+            this.newPageButton.UseVisualStyleBackColor = true;
+            this.newPageButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
+            // schemasListBox
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.listBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.documentStoreBindingSource1, "Database", true));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(46, 56);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(229, 303);
-            this.listBox1.TabIndex = 3;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.schemasListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.schemasListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.documentStoreBindingSource1, "Database", true));
+            this.schemasListBox.FormattingEnabled = true;
+            this.schemasListBox.Location = new System.Drawing.Point(46, 56);
+            this.schemasListBox.Name = "schemasListBox";
+            this.schemasListBox.Size = new System.Drawing.Size(229, 303);
+            this.schemasListBox.TabIndex = 3;
+            this.schemasListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // documentStoreBindingSource1
             // 
@@ -70,33 +70,33 @@ namespace igxFormFieldsToolbar
             // 
             this.documentStoreBindingSource.DataSource = typeof(Raven.Client.Documents.DocumentStore);
             // 
-            // searchBox
+            // schemaFilterSearchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(46, 12);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(229, 20);
-            this.searchBox.TabIndex = 4;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.schemaFilterSearchBox.Location = new System.Drawing.Point(46, 12);
+            this.schemaFilterSearchBox.Name = "schemaFilterSearchBox";
+            this.schemaFilterSearchBox.Size = new System.Drawing.Size(229, 20);
+            this.schemaFilterSearchBox.TabIndex = 4;
+            this.schemaFilterSearchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // label1
+            // filterLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Filter";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.filterLabel.AutoSize = true;
+            this.filterLabel.Location = new System.Drawing.Point(139, 35);
+            this.filterLabel.Name = "filterLabel";
+            this.filterLabel.Size = new System.Drawing.Size(29, 13);
+            this.filterLabel.TabIndex = 5;
+            this.filterLabel.Text = "Filter";
+            this.filterLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // newPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 410);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.filterLabel);
+            this.Controls.Add(this.schemaFilterSearchBox);
+            this.Controls.Add(this.schemasListBox);
+            this.Controls.Add(this.newPageButton);
             this.MaximumSize = new System.Drawing.Size(500, 510);
             this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "newPageForm";
@@ -112,11 +112,11 @@ namespace igxFormFieldsToolbar
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button newPageButton;
+        private System.Windows.Forms.ListBox schemasListBox;
         private System.Windows.Forms.BindingSource documentStoreBindingSource1;
         private System.Windows.Forms.BindingSource documentStoreBindingSource;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox schemaFilterSearchBox;
+        private System.Windows.Forms.Label filterLabel;
     }
 }

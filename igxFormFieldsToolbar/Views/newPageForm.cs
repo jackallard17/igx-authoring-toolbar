@@ -28,7 +28,7 @@ namespace igxFormFieldsToolbar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int userSelection = listBox1.SelectedIndex;
+            int userSelection = schemasListBox.SelectedIndex;
             if (userSelection != -1)
             {
                 documentControls.addCMSPage(schemas, userSelection);
@@ -50,27 +50,27 @@ namespace igxFormFieldsToolbar
         private void newPageForm_Load(object sender, EventArgs e)
         {
 
-            listBox1.BeginUpdate();
+            schemasListBox.BeginUpdate();
             foreach (SchemaDetails schema in schemas){
-                listBox1.Items.Add(schema.FriendlyName);
+                schemasListBox.Items.Add(schema.FriendlyName);
             }
-            listBox1.EndUpdate();
+            schemasListBox.EndUpdate();
 
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            schemasListBox.Items.Clear();
 
-            listBox1.BeginUpdate();
+            schemasListBox.BeginUpdate();
             foreach (SchemaDetails schema in schemas)
             {
-                if (schema.FriendlyName.StartsWith(searchBox.Text, StringComparison.CurrentCultureIgnoreCase))
+                if (schema.FriendlyName.StartsWith(schemaFilterSearchBox.Text, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    listBox1.Items.Add(schema);
+                    schemasListBox.Items.Add(schema);
                 }
             }
-            listBox1.EndUpdate();
+            schemasListBox.EndUpdate();
             
 
         }

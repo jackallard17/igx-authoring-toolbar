@@ -324,6 +324,7 @@
     <Compile Include="Controllers\RuntimeController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\SchemaImportController.cs" />
+    <Compile Include="Controllers\UserAuthController.cs" />
     <Compile Include="Models\CMSPage.cs" />
     <Compile Include="Models\UserAuthInput.cs" />
     <Compile Include="Views\ExistingPageForm.cs">
