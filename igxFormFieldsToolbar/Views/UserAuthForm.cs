@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using igxFormFieldsToolbar.Controllers;
 
 namespace igxFormFieldsToolbar.Views
 {
     public partial class UserAuthForm : Form
     {
+        static UserAuthInput testInput = new UserAuthInput()
+        {
+            username = "jallard",
+            password = "jallard",
+            membershipProvier = "IngeniuxMembershipProvider"
+        };
+
         public UserAuthForm()
         {
             InitializeComponent();
@@ -19,7 +27,7 @@ namespace igxFormFieldsToolbar.Views
 
         private void UserAuthForm_Load(object sender, EventArgs e)
         {
-
+            membershipProviderCombo.Items.AddRange(UserAuthController.getMembershipProviders(testInput).ToArray());
         }
 
         private void label1_Click(object sender, EventArgs e)
