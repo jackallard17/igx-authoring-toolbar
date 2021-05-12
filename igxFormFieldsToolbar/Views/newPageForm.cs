@@ -2,28 +2,19 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using igxFormFieldsToolbar.SchemaDesignerService;
+using igxFormFieldsToolbar.Controllers;
 
 namespace igxFormFieldsToolbar
 {
     public partial class newPageForm : Form
     {
-        List<SchemaDetails> schemas = SchemaImportController.getSchemaDetails(testInput);
+        List<SchemaDetails> schemas = SchemaImportController.getSchemaDetails(UserAuthController.currentUser);
         DocumentController documentControls = new DocumentController();
-
-        static UserAuthInput testInput = new UserAuthInput()
-        {
-            username = "jallard",
-            password = "jallard",
-            membershipProvier = "IngeniuxMembershipProvider"
-        };
-
 
         public newPageForm()
         {
-
-
             InitializeComponent();
-            schemas = SchemaImportController.getSchemaDetails(testInput);
+            schemas = SchemaImportController.getSchemaDetails(UserAuthController.currentUser);
         }
 
         private void button1_Click(object sender, EventArgs e)

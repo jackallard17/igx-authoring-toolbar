@@ -34,10 +34,10 @@ namespace igxFormFieldsToolbar
 					using (OperationContextScope scope = new OperationContextScope(service.InnerChannel))
 					{
 						OperationContext.Current.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader("IGXAToken", "IGXNameSpace", token));
-						SchemaDetailGetInput schemaID = new SchemaDetailGetInput();
+						SchemaDetailGetInput schemaDetail = new SchemaDetailGetInput();
 
-						schemaID.schemaId = $"schemas/{i}";
-						schemasList.Add(service.GetSchemaDetails(schemaID).message);
+						schemaDetail.schemaId = $"schemas/{i}";
+						schemasList.Add(service.GetSchemaDetails(schemaDetail).message);
 					}
 				}
 			}

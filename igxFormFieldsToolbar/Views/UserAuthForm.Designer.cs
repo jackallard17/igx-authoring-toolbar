@@ -36,6 +36,7 @@ namespace igxFormFieldsToolbar.Views
             this.passwordLabel = new System.Windows.Forms.Label();
             this.membershipProviderLabel = new System.Windows.Forms.Label();
             this.membershipProviderCombo = new System.Windows.Forms.ComboBox();
+            this.Submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginLabel
@@ -89,7 +90,7 @@ namespace igxFormFieldsToolbar.Views
             // membershipProviderLabel
             // 
             this.membershipProviderLabel.AutoSize = true;
-            this.membershipProviderLabel.Location = new System.Drawing.Point(96, 183);
+            this.membershipProviderLabel.Location = new System.Drawing.Point(100, 161);
             this.membershipProviderLabel.Name = "membershipProviderLabel";
             this.membershipProviderLabel.Size = new System.Drawing.Size(106, 13);
             this.membershipProviderLabel.TabIndex = 6;
@@ -98,17 +99,28 @@ namespace igxFormFieldsToolbar.Views
             // membershipProviderCombo
             // 
             this.membershipProviderCombo.FormattingEnabled = true;
-            this.membershipProviderCombo.Location = new System.Drawing.Point(73, 199);
+            this.membershipProviderCombo.Location = new System.Drawing.Point(77, 177);
             this.membershipProviderCombo.Name = "membershipProviderCombo";
             this.membershipProviderCombo.Size = new System.Drawing.Size(156, 21);
             this.membershipProviderCombo.TabIndex = 7;
             this.membershipProviderCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // Submit
+            // 
+            this.Submit.Location = new System.Drawing.Point(114, 217);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.TabIndex = 8;
+            this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserAuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 232);
+            this.ClientSize = new System.Drawing.Size(308, 252);
+            this.Controls.Add(this.Submit);
             this.Controls.Add(this.membershipProviderCombo);
             this.Controls.Add(this.membershipProviderLabel);
             this.Controls.Add(this.passwordLabel);
@@ -134,5 +146,6 @@ namespace igxFormFieldsToolbar.Views
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label membershipProviderLabel;
         private System.Windows.Forms.ComboBox membershipProviderCombo;
+        private System.Windows.Forms.Button Submit;
     }
 }

@@ -13,13 +13,6 @@ namespace igxFormFieldsToolbar.Views
 {
     public partial class UserAuthForm : Form
     {
-        static UserAuthInput testInput = new UserAuthInput()
-        {
-            username = "jallard",
-            password = "jallard",
-            membershipProvier = "IngeniuxMembershipProvider"
-        };
-
         public UserAuthForm()
         {
             InitializeComponent();
@@ -27,7 +20,7 @@ namespace igxFormFieldsToolbar.Views
 
         private void UserAuthForm_Load(object sender, EventArgs e)
         {
-            membershipProviderCombo.Items.AddRange(UserAuthController.getMembershipProviders(testInput).ToArray());
+            membershipProviderCombo.Items.AddRange(UserAuthController.getMembershipProviders().ToArray());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,6 +42,19 @@ namespace igxFormFieldsToolbar.Views
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserAuthInput input = new UserAuthInput()
+            {
+                username = usernameTextBox.Text,
+                password = passwordTextBox.Text,
+                membershipProvier = membershipProviderCombo.Text
+            };
+
+            //sets current user
+            UserAuthController.currentUser = input;
         }
     }
 }
