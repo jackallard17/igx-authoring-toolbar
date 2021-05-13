@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using igxFormFieldsToolbar.MembershipService;
+using igxFormFieldsToolbar.Views;
+using igxFormFieldsToolbar.Models;
+using System.Windows.Forms;
 
 namespace igxFormFieldsToolbar.Controllers
 {
@@ -12,7 +15,20 @@ namespace igxFormFieldsToolbar.Controllers
     {
         public static UserAuthInput currentUser { get; set; }
 
-        Views.UserAuthForm newForm = new Views.UserAuthForm();
+        public static T checkUserAuth<T>() where T : new()
+        {
+            UserAuthForm form = new UserAuthForm();
+
+            if (currentUser == null)
+            {
+                form.ShowDialog();
+
+                return default;
+            } else
+            {
+                return new T();
+            }
+        }
 
         public static List<string> getMembershipProviders()
         {
@@ -32,7 +48,6 @@ namespace igxFormFieldsToolbar.Controllers
                     membershipProviders.Add(provider.value.displayName);
                 }
             }
-
             return membershipProviders;
         }
     }

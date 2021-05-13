@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using igxFormFieldsToolbar.Views;
+using igxFormFieldsToolbar.Controllers;
+using System.Windows.Forms;
 
 namespace igxFormFieldsToolbar
 {
@@ -16,8 +18,13 @@ namespace igxFormFieldsToolbar
 
         private void newPage_Click_1(object sender, RibbonControlEventArgs e)
         {
-            newPageForm form = new newPageForm();
-            form.ShowDialog();
+            var authResponse = UserAuthController.checkUserAuth<newPageForm>();
+
+            if (authResponse != default)
+            {
+                authResponse.ShowDialog();
+            }
+
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)
@@ -28,8 +35,12 @@ namespace igxFormFieldsToolbar
 
         private void existingPage_Click(object sender, RibbonControlEventArgs e)
         {
-            ExistingPageForm form = new ExistingPageForm();
-            form.ShowDialog();
+            var authResponse = UserAuthController.checkUserAuth<ExistingPageForm>();
+
+            if (authResponse != default)
+            {
+                authResponse.ShowDialog();
+            }
         }
     }
 }

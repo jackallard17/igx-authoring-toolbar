@@ -44,6 +44,7 @@ namespace igxFormFieldsToolbar.Views
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             UserAuthInput input = new UserAuthInput()
@@ -55,6 +56,8 @@ namespace igxFormFieldsToolbar.Views
 
             //sets current user
             UserAuthController.currentUser = input;
+
+            this.Close();
         }
     }
 }
