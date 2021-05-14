@@ -30,6 +30,7 @@ namespace igxFormFieldsToolbar
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newPageForm));
             this.newPageButton = new System.Windows.Forms.Button();
             this.schemasListBox = new System.Windows.Forms.ListBox();
             this.documentStoreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -97,11 +98,12 @@ namespace igxFormFieldsToolbar
             this.Controls.Add(this.schemaFilterSearchBox);
             this.Controls.Add(this.schemasListBox);
             this.Controls.Add(this.newPageButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(500, 510);
             this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "newPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Select Page Schema";
+            this.Text = "Add New CMS Page";
             this.Load += new System.EventHandler(this.newPageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentStoreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentStoreBindingSource)).EndInit();

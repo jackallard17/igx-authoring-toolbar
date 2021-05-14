@@ -29,6 +29,7 @@ namespace igxFormFieldsToolbar.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAuthForm));
             this.loginLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -128,9 +129,10 @@ namespace igxFormFieldsToolbar.Views
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserAuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserAuthForm";
+            this.Text = "My Account";
             this.Load += new System.EventHandler(this.UserAuthForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

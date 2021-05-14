@@ -29,6 +29,7 @@ namespace igxFormFieldsToolbar.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExistingPageForm));
             this.xIDLabel = new System.Windows.Forms.Label();
             this.xIDTextBox = new System.Windows.Forms.TextBox();
             this.importPageButton = new System.Windows.Forms.Button();
@@ -77,9 +78,10 @@ namespace igxFormFieldsToolbar.Views
             this.Controls.Add(this.importPageButton);
             this.Controls.Add(this.xIDTextBox);
             this.Controls.Add(this.xIDLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExistingPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ExistingPageForm";
+            this.Text = "Edit Existing Page";
             this.ResumeLayout(false);
             this.PerformLayout();
 
