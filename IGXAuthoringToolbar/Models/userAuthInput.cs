@@ -1,5 +1,4 @@
-﻿
-namespace IGXAuthoringToolbar
+﻿namespace IGXAuthoringToolbar
 {
     public class UserAuthInput
     {

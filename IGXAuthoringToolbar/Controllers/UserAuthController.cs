@@ -1,13 +1,8 @@
-﻿using System;
+﻿using IGXAuthoringToolbar.MembershipService;
+using IGXAuthoringToolbar.Views;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ServiceModel;
-using IGXAuthoringToolbar.MembershipService;
-using IGXAuthoringToolbar.Views;
-using IGXAuthoringToolbar.Models;
-using System.Windows.Forms;
 
 namespace IGXAuthoringToolbar.Controllers
 {

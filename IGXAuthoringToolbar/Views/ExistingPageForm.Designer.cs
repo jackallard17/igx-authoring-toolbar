@@ -82,6 +82,7 @@ namespace IGXAuthoringToolbar.Views
             this.Name = "ExistingPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Existing Page";
+            this.Load += new System.EventHandler(this.ExistingPageForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IGXAuthoringToolbar.Views
@@ -15,6 +8,11 @@ namespace IGXAuthoringToolbar.Views
         public ExistingPageForm()
         {
             InitializeComponent();
+        }
+
+        private void ExistingPageForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,12 +1,6 @@
-﻿using Microsoft.Office.Tools.Ribbon;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using IGXAuthoringToolbar.Controllers;
 using IGXAuthoringToolbar.Views;
-using IGXAuthoringToolbar.Controllers;
-using System.Windows.Forms;
+using Microsoft.Office.Tools.Ribbon;
 
 namespace IGXAuthoringToolbar
 {

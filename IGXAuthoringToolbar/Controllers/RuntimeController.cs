@@ -5,9 +5,7 @@ using Newtonsoft.Json;
 
 namespace IGXAuthoringToolbar.Controllers
 {
-    //manages the persistance of user data between authoring sessions. 
-    //all user data is serialized into json within the docProps of the file when a document is saved
-    //at each runtime, this JSON data, if it exists, is pulled from the document and deserialized to be used by the addin again
+    //manages the session data across the plugin during runtime
     class RuntimeController
     {
         private Microsoft.Office.Tools.Word.Document document;
