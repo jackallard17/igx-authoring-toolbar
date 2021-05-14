@@ -5,4 +5,4 @@ This add in is designed to seamlessly pull in schema and content data from a cus
 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/47119935/118308500-dec2af80-b4a0-11eb-92a8-c6f992ca581c.png)
-
+*The ribbon interface provides simple controls for importing and creating CMS pages*
