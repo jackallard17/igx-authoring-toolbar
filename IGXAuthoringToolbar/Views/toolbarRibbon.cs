@@ -23,8 +23,7 @@ namespace IGXAuthoringToolbar
 
         private void button2_Click(object sender, RibbonControlEventArgs e)
         {
-            UserAuthForm form = new UserAuthForm();
-            form.ShowDialog();
+            ThisAddIn.runtimeController.activeForm.ShowDialog();
         }
 
         private void existingPage_Click(object sender, RibbonControlEventArgs e)

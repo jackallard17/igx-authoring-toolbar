@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Office = Microsoft.Office.Core;
 using IGXAuthoringToolbar.Models;
+using IGXAuthoringToolbar.Views;
 using Newtonsoft.Json;
 
 namespace IGXAuthoringToolbar.Controllers
@@ -12,11 +13,10 @@ namespace IGXAuthoringToolbar.Controllers
         private static Office.DocumentProperties docProps;
         private List<CMSPage> pages;
 
-        public RuntimeController(Microsoft.Office.Tools.Word.Document doc,  List<CMSPage> pageList)
+        public UserAuthForm activeForm { get; set; }
+
+        public RuntimeController()
         {
-            document = doc;
-            pages = pageList;
-            docProps = (Office.DocumentProperties)document.CustomDocumentProperties;
         }
 
         //the two main interfaces of the RuntimeController class. called at document save time and document load time respectively

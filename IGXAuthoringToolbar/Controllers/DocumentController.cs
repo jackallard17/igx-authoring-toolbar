@@ -15,7 +15,6 @@ namespace IGXAuthoringToolbar
 
         private static List<CMSPage> pages = new List<CMSPage>();
 
-        private static RuntimeController runtime = new RuntimeController(document, pages);
         public void addCMSPage(List<SchemaDetails> schemas, int selection)
         {
             //Creates a new XML part corresponding to a CMS page, sets the root node
@@ -31,10 +30,6 @@ namespace IGXAuthoringToolbar
                 {
                     addField(field, newPage);
                 }
-            }
-            else
-            {
-                //do nothing
             }
             pages.Add(newPage);
         }
@@ -91,7 +86,6 @@ namespace IGXAuthoringToolbar
         //clears existing XML parts and updates with new user input
         public void exportUserContent()
         {
-            runtime.serializeSessionData();
             int i = document.CustomXMLParts.Count;
             while (i > 3)
             {

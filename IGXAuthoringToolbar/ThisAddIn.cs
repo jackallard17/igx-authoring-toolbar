@@ -8,14 +8,22 @@ using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
 using System.Windows.Forms;
+using IGXAuthoringToolbar.Controllers;
 
 namespace IGXAuthoringToolbar
 {
     public partial class ThisAddIn
     {
+        internal static RuntimeController runtimeController = new RuntimeController();
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             this.Application.DocumentBeforeSave += Application_DocumentBeforeSave;
+
+            runtimeController = new RuntimeController()
+            {
+                activeForm = new Views.UserAuthForm()
+            };
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)

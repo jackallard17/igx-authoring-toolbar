@@ -12,11 +12,9 @@ namespace IGXAuthoringToolbar.Controllers
 
         public static T checkUserAuth<T>() where T : new()
         {
-            UserAuthForm form = new UserAuthForm();
-
             if (currentUser == null)
             {
-                form.ShowDialog();
+                ThisAddIn.runtimeController.activeForm.ShowDialog();
 
                 return default;
             } else
