@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IGXAuthoringToolbar.Controllers
 {
-    //manages the session data across the plugin during runtime
+    //manages the session data across the plugin during runtime. Instantiated once per user session
     class RuntimeController
     {
         private Microsoft.Office.Tools.Word.Document document;
@@ -18,17 +18,5 @@ namespace IGXAuthoringToolbar.Controllers
         public RuntimeController()
         {
         }
-
-        //the two main interfaces of the RuntimeController class. called at document save time and document load time respectively
-        public void serializeSessionData()
-        {
-            string json = "";
-            foreach(CMSPage page in pages)
-            {
-                json += JsonConvert.SerializeObject(page);
-            }
-            docProps.Add("pages", false, Microsoft.Office.Core.MsoDocProperties.msoPropertyTypeString, json);
-        }
-        
     }
 }

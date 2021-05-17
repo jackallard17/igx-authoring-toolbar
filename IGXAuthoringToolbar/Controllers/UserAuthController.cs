@@ -10,7 +10,19 @@ namespace IGXAuthoringToolbar.Controllers
     {
         public static UserAuthInput currentUser { get; set; }
 
-        public static T checkUserAuth<T>() where T : new()
+        public static string validateUser(UserAuthInput input)
+        {
+            string cmsURL = "bdsandbox";
+            WSHttpBinding httpBinding = new WSHttpBinding(SecurityMode.None);
+            EndpointAddress endpoint = new EndpointAddress($"http://{cmsURL}/soap/MembershipProvidersServices.svc");
+
+            using (MembershipProvidersServicesClient mservice = new MembershipProvidersServicesClient(httpBinding, endpoint))
+            {
+                return mservice.Login(input.username, input.password, input.membershipProvier).error;
+            }
+        }
+
+        public static T showAuth<T>() where T : new()
         {
             if (currentUser == null)
             {
@@ -30,7 +42,6 @@ namespace IGXAuthoringToolbar.Controllers
             string cmsURL = "bdsandbox";
             WSHttpBinding httpBinding = new WSHttpBinding(SecurityMode.None);
             EndpointAddress endpoint = new EndpointAddress($"http://{cmsURL}/soap/MembershipProvidersServices.svc");
-            httpBinding.MaxReceivedMessageSize = 2147483647;
 
             using (MembershipProvidersServicesClient mservice = new MembershipProvidersServicesClient(httpBinding, endpoint))
             {

@@ -1,6 +1,7 @@
 ﻿using IGXAuthoringToolbar.Controllers;
 using System;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace IGXAuthoringToolbar.Views
 {
@@ -48,9 +49,15 @@ namespace IGXAuthoringToolbar.Views
             };
 
             //sets current user
-            UserAuthController.currentUser = input;
+            if (UserAuthController.validateUser(input) == null)
+            {
+                UserAuthController.currentUser = input;
+                this.Close();
+            }else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
 
-            this.Close();
         }
 
         private void usernameLabel_Click(object sender, EventArgs e)
