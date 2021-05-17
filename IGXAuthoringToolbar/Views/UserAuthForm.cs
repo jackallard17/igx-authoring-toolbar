@@ -9,11 +9,11 @@ namespace IGXAuthoringToolbar.Views
         public UserAuthForm()
         {
             InitializeComponent();
+            membershipProviderCombo.Items.AddRange(UserAuthController.getMembershipProviders().ToArray());
         }
 
         private void UserAuthForm_Load(object sender, EventArgs e)
         {
-            membershipProviderCombo.Items.AddRange(UserAuthController.getMembershipProviders().ToArray());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,6 +51,11 @@ namespace IGXAuthoringToolbar.Views
             UserAuthController.currentUser = input;
 
             this.Close();
+        }
+
+        private void usernameLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

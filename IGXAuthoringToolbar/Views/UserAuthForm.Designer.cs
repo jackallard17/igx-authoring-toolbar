@@ -58,7 +58,6 @@ namespace IGXAuthoringToolbar.Views
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(156, 20);
             this.usernameTextBox.TabIndex = 1;
-            this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // passwordTextBox
             // 
@@ -72,15 +71,18 @@ namespace IGXAuthoringToolbar.Views
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.usernameLabel.Location = new System.Drawing.Point(125, 55);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(55, 13);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "Username";
+            this.usernameLabel.Click += new System.EventHandler(this.usernameLabel_Click);
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Location = new System.Drawing.Point(125, 108);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
@@ -91,6 +93,7 @@ namespace IGXAuthoringToolbar.Views
             // membershipProviderLabel
             // 
             this.membershipProviderLabel.AutoSize = true;
+            this.membershipProviderLabel.BackColor = System.Drawing.Color.Transparent;
             this.membershipProviderLabel.Location = new System.Drawing.Point(100, 161);
             this.membershipProviderLabel.Name = "membershipProviderLabel";
             this.membershipProviderLabel.Size = new System.Drawing.Size(106, 13);
@@ -124,11 +127,11 @@ namespace IGXAuthoringToolbar.Views
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.membershipProviderCombo);
             this.Controls.Add(this.membershipProviderLabel);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.passwordLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserAuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
