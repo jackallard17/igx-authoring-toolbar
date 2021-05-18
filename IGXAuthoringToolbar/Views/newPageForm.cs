@@ -58,7 +58,7 @@ namespace IGXAuthoringToolbar
             {
                 if (schema.FriendlyName.StartsWith(schemaFilterSearchBox.Text, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    schemasListBox.Items.Add(schema);
+                    schemasListBox.Items.Add(schema.FriendlyName);
                 }
             }
             schemasListBox.EndUpdate();
