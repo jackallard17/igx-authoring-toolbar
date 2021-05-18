@@ -111,6 +111,7 @@ namespace IGXAuthoringToolbar.Views
             // 
             // Submit
             // 
+            this.Submit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Submit.Location = new System.Drawing.Point(114, 217);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
@@ -121,6 +122,7 @@ namespace IGXAuthoringToolbar.Views
             // 
             // UserAuthForm
             // 
+            this.AcceptButton = this.Submit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 252);
@@ -133,6 +135,7 @@ namespace IGXAuthoringToolbar.Views
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.passwordLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "UserAuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Account";
