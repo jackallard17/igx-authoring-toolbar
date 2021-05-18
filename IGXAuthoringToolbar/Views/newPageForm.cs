@@ -6,15 +6,17 @@ using IGXAuthoringToolbar.Controllers;
 
 namespace IGXAuthoringToolbar
 {
-    public partial class newPageForm : Form
+    public partial class NewPageForm : Form
     {
-        List<SchemaDetails> schemas = SchemaImportController.getSchemaDetails(UserAuthController.currentUser);
-        DocumentController documentControls = new DocumentController();
+        private List<SchemaDetails> schemas = SchemaImportController.getSchemaDetails(UserAuthController.currentUser);
+        private DocumentController documentControls = new DocumentController();
+        private List<SchemaDetails> displayedSchemas = new List<SchemaDetails>();
 
-        public newPageForm()
+        public NewPageForm()
         {
             InitializeComponent();
             schemas = SchemaImportController.getSchemaDetails(UserAuthController.currentUser);
+            displayedSchemas.AddRange(schemas);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,7 +24,7 @@ namespace IGXAuthoringToolbar
             int userSelection = schemasListBox.SelectedIndex;
             if (userSelection != -1)
             {
-                documentControls.addCMSPage(schemas, userSelection);
+                documentControls.addCMSPage(displayedSchemas[userSelection]);
                 this.Close();
             } 
 
@@ -52,6 +54,7 @@ namespace IGXAuthoringToolbar
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             schemasListBox.Items.Clear();
+            displayedSchemas.Clear();
 
             schemasListBox.BeginUpdate();
             foreach (SchemaDetails schema in schemas)
@@ -59,6 +62,7 @@ namespace IGXAuthoringToolbar
                 if (schema.FriendlyName.StartsWith(schemaFilterSearchBox.Text, StringComparison.CurrentCultureIgnoreCase))
                 {
                     schemasListBox.Items.Add(schema.FriendlyName);
+                    displayedSchemas.Add(schema);
                 }
             }
             schemasListBox.EndUpdate();

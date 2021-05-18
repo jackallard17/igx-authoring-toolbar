@@ -1,7 +1,7 @@
 ﻿
 namespace IGXAuthoringToolbar
 {
-    partial class newPageForm
+    partial class NewPageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace IGXAuthoringToolbar
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newPageForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPageForm));
             this.newPageButton = new System.Windows.Forms.Button();
             this.schemasListBox = new System.Windows.Forms.ListBox();
             this.documentStoreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -89,7 +89,7 @@ namespace IGXAuthoringToolbar
             this.filterLabel.Text = "Filter";
             this.filterLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // newPageForm
+            // NewPageForm
             // 
             this.AcceptButton = this.newPageButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +102,7 @@ namespace IGXAuthoringToolbar
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(500, 510);
             this.MinimumSize = new System.Drawing.Size(100, 100);
-            this.Name = "newPageForm";
+            this.Name = "NewPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New CMS Page";
             this.Load += new System.EventHandler(this.newPageForm_Load);

@@ -15,22 +15,18 @@ namespace IGXAuthoringToolbar
 
         private static List<CMSPage> pages = new List<CMSPage>();
 
-        public void addCMSPage(List<SchemaDetails> schemas, int selection)
+        public void addCMSPage(SchemaDetails selection)
         {
-            //Creates a new XML part corresponding to a CMS page, sets the root node
             CMSPage newPage = new CMSPage();
-            newPage.ViewName = schemas[selection].ViewName;
+            newPage.ViewName = selection.ViewName;
 
-            if (selection != -1)
+            var fields = selection.Fields;
+
+            foreach (SchemaFieldInfo field in fields)
             {
-                SchemaDetails selectedSchema = schemas[selection];
-                var fields = selectedSchema.Fields;
-
-                foreach (SchemaFieldInfo field in fields)
-                {
-                    addField(field, newPage);
-                }
+                addField(field, newPage);
             }
+
             pages.Add(newPage);
         }
 

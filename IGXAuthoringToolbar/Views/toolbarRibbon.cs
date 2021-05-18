@@ -12,7 +12,7 @@ namespace IGXAuthoringToolbar
 
         private void newPage_Click_1(object sender, RibbonControlEventArgs e)
         {
-            var authResponse = UserAuthController.showAuth<newPageForm>();
+            var authResponse = UserAuthController.showAuth<NewPageForm>();
 
             if (authResponse != default)
             {
